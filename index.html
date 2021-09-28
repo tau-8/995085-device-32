@@ -11,12 +11,11 @@
         <img src="" alt="Логотип интернет-магазина «Device»">
       </a>
 
+      <form class="main-search-form" action="#" method="POST">
+        <input class="main-search-field" type="search" placeholder="Поиск по сайту">
+      </form>
+
       <ul class="userbar">
-        <li class="userbar-item">
-          <form class="userbar-search-form" action="#" method="POST">
-            <input class="userbar-search-field" type="search" placeholder="Поиск по сайту">
-          </form>
-        </li>
         <li class="userbar-item">
           <a class="userbar-link login" href="#">Войти</a>
         </li>
@@ -211,19 +210,18 @@
 
       <section class="offers">
         <h2 class="visually-hidden">Наши предложения</h2>
-        <nav class="offers-navigation">
-          <ul class="offers-navigation-list">
-            <li class="offers-navigation-item">
-              <button class="offers-navigation-button" type="button">Доставка</button>
-            </li>
-            <li class="offers-navigation-item">
-              <button class="offers-navigation-button" type="button">Гарантия</button>
-            </li>
-            <li class="offers-navigation-item">
-              <button class="offers-navigation-button" type="button">Кредит</button>
-            </li>
-          </ul>
-        </nav>
+
+        <ul class="offers-toggle-list">
+          <li class="offers-toggle-item">
+            <button class="offers-toggle-button" type="button">Доставка</button>
+          </li>
+          <li class="offers-toggle-item">
+            <button class="offers-toggle-button" type="button">Гарантия</button>
+          </li>
+          <li class="offers-toggle-item">
+            <button class="offers-toggle-button" type="button">Кредит</button>
+          </li>
+        </ul>
 
         <ul class="offers-list">
           <li class="offers-item">
@@ -254,13 +252,13 @@
         <p class="about-info">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
         <ul class="about-transport-companies-list">
           <li class="about-transport-companies-item">
-            <b>Меловые линии</b>
+            <p>Меловые линии</p>
           </li>
-          <li class="about-transport-companies-item">
-            <b>СДИК</b>
+          <li class="astrongout-transport-companies-item">
+            <p>СДИК</p>
           </li>
-          <li class="about-transport-companies-item">
-            <b>ТоксБерри</b>
+          <li class="astrongout-transport-companies-item">
+            <p>ТоксБерри</p>
           </li>
         </ul>
         <a class="button button-about-details" href="#">Подробнее о нас</a>
