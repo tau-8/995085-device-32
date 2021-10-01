@@ -12,7 +12,12 @@
       </a>
 
       <form class="main-search-form" action="#" method="POST">
-        <input class="main-search-field" type="search" placeholder="Поиск по сайту">
+        <label class="main-search label">
+          <!-- Добавил спан т.к. не все ридеры, похоже, читают тект в placeholder -->
+          <span class="visually-hidden">Поиск по сайту</span>
+          <input class="main-search-field" type="search" placeholder="Поиск по сайту">
+        </label>
+        <button class="visually-hidden main-search-button" type="submit">Искать</button>
       </form>
 
       <ul class="userbar">
