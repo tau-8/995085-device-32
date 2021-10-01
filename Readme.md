@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Горда Купаташвили](https://up.htmlacademy.ru/htmlcss/32/user/995085).
-* Наставник: [Дмитрий Гуляев](https://up.htmlacademy.ru/htmlcss/32/user/87930).
+* Наставник: [Сергей Артёмов](https://up.htmlacademy.ru/htmlcss/32/user/228892).
 
 ---
 
