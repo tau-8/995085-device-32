@@ -106,7 +106,7 @@
       <section class="catalog-products">
         <h2 class="visually-hidden">Каталог товаров с фильтрами</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="GET">
-          <h2 class="catalog-section-title">Фильтр:</h2>
+          <h3 class="catalog-section-title">Фильтр:</h3>
           <fieldset class="catalog-filter-group">
             <legend class="catalog-fieldset-title">Стоимость</legend>
             <button class="range-slider-button min-price" type="button" aria-hidden="true" tabindex="-1"></button>
@@ -184,7 +184,7 @@
         </form>
 
         <form class="catalog-sorting"  action="https://echo.htmlacademy.ru/" method="GET">
-          <h2 class="catalog-section-title">Сортировка:</h2>
+          <h3 class="catalog-section-title">Сортировка:</h3>
           <select class="catalog-sorting-select" id="sorting" name="sorting">
             <option value="popular">Сначала популярные</option>
             <option value="inexpensive">Сначала недорогие</option>
@@ -198,74 +198,80 @@
           </button>
         </form>
 
-        <ul class="product-list">
-          <li class="product-card">
-            <img class="product-card-image" src="#" alt="">
-            <dl class="product-card-info">
-              <dt class="product-card-title">Любительская селфи-палка</dt>
-              <dd class="product-card-price">500 &#8381;</dd>
-            </dl>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <span class="visually-hidden product-new">New</span>
-          </li>
-          <li class="product-card">
-            <img class="product-card-image" src="#" alt="">
-            <dl class="product-card-info">
-              <dt class="product-card-title">Профессиональная селфи-палка</dt>
-              <dd class="product-card-price">1 500 &#8381;</dd>
-            </dl>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <span class="visually-hidden product-new">New</span>
-          </li>
-          <li class="product-card">
-            <img class="product-card-image" src="#" alt="">
-            <dl class="product-card-info">
-              <dt class="product-card-title">Непотопляемая селфи-палка</dt>
-              <dd class="product-card-price">2 500 &#8381;</dd>
-            </dl>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <span class="visually-hidden product-new">New</span>
-          </li>
-          <li class="product-card">
-            <img class="product-card-image" src="#" alt="">
-            <dl class="product-card-info">
-              <dt class="product-card-title">Селфи-палка «Следуй за мной»</dt>
-              <dd class="product-card-price">4 900 &#8381;</dd>
-            </dl>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <span class="product-new">New</span>
-          </li>
-        </ul>
-        <button class="product-load-more">Загрузить еще</button>
+        <section class="products">
+          <h3 class="visually-hidden">Список товаров:</h3>
+          <ul class="product-list">
+            <li class="product-card">
+              <img class="product-card-image" src="#" alt="">
+              <dl class="product-card-info">
+                <dt class="product-card-title">Любительская селфи-палка</dt>
+                <dd class="product-card-price">500 &#8381;</dd>
+              </dl>
+              <a class="product-card-button button" href="#">Подробнее</a>
+              <span class="visually-hidden product-new">New</span>
+            </li>
+            <li class="product-card">
+              <img class="product-card-image" src="#" alt="">
+              <dl class="product-card-info">
+                <dt class="product-card-title">Профессиональная селфи-палка</dt>
+                <dd class="product-card-price">1 500 &#8381;</dd>
+              </dl>
+              <a class="product-card-button button" href="#">Подробнее</a>
+              <span class="visually-hidden product-new">New</span>
+            </li>
+            <li class="product-card">
+              <img class="product-card-image" src="#" alt="">
+              <dl class="product-card-info">
+                <dt class="product-card-title">Непотопляемая селфи-палка</dt>
+                <dd class="product-card-price">2 500 &#8381;</dd>
+              </dl>
+              <a class="product-card-button button" href="#">Подробнее</a>
+              <span class="visually-hidden product-new">New</span>
+            </li>
+            <li class="product-card">
+              <img class="product-card-image" src="#" alt="">
+              <dl class="product-card-info">
+                <dt class="product-card-title">Селфи-палка «Следуй за мной»</dt>
+                <dd class="product-card-price">4 900 &#8381;</dd>
+              </dl>
+              <a class="product-card-button button" href="#">Подробнее</a>
+              <span class="product-new">New</span>
+            </li>
+          </ul>
+          <button class="product-load-more">Загрузить еще</button>
+        </section>
 
-        <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled">
-              <span class="visually-hidden">Назад</span>
-            </a>
-          </li>
-          <li class="pagination-item">
-            <!-- Тот же дополнительный класс, что и у breadcrumbs-link -->
-            <a class="pagination-link current-page" href="catalog.html" aria-current="page">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">15</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">
-              <span class="visually-hidden">Вперед</span>
-            </a>
-          </li>
-        </ul>
+        <section class="pagination">
+          <h3 class="visually-hidden">Переход по номерам страниц списка товаров:</h3>
+          <ul class="pagination-list">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-prev pagination-disabled">
+                <span class="visually-hidden">Назад</span>
+              </a>
+            </li>
+            <li class="pagination-item">
+              <!-- Тот же дополнительный класс, что и у breadcrumbs-link -->
+              <a class="pagination-link current-page" href="catalog.html" aria-current="page">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">15</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-next" href="#">
+                <span class="visually-hidden">Вперед</span>
+              </a>
+            </li>
+          </ul>
+        </section>
       </section>
     </main>
 
