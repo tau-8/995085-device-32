@@ -1,0 +1,331 @@
+/*\\\\\\\\\\\\\\\\
+\\\\\\ Шрифты \\\\\
+\\\\\\\\\\\\\\\\\*/
+
+/* Rubik 400/700/800 */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Raleway 800 */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\ Общие стили \\\
+\\\\\\\\\\\\\\\\\*/
+
+/* По ТЕГАМ */
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000;
+  background-color: #FFF;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* По КЛАССАМ */
+.button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\ Шапка сайта \\\
+\\\\\\\\\\\\\\\\\*/
+.page-header {
+  background-color: #ffe17f;
+}
+
+.userbar-item,
+.main-navigation-item {
+  text-align: center;
+}
+
+.userbar-link,
+.main-navigation-link {
+  line-height: 19px;
+}
+
+.uppercase-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\\\ Главная \\\\\
+\\\\\\\\\\\\\\\\\*/
+
+/* Популярные товары */
+.product-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.product-description {
+  color: #444;
+}
+
+.product-specs-key {
+  font-size: 16px;
+  color: #444;
+}
+
+.product-specs-value {
+  font-size: 36px;
+}
+
+/* Категории */
+.product-categories-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Предложения */
+.offers {
+  background-color: #F0F0F0;
+}
+
+.offer-description {
+  color: #444;
+}
+
+/* Доставка */
+.delivery {
+  background-color: #F0F0F0;
+}
+
+.delivery-button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* О нас */
+.about-info {
+  color: #444;
+}
+
+.about-transport-companies-item {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* Контакты */
+.contacts-description {
+  color: #444;
+}
+
+.contacts-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  color: #444;
+}
+
+.contacts-address {
+  font-style: normal;
+  color: #444;
+}
+
+.contacts-address-phone {
+  text-decoration: underline;
+}
+
+.contacts-schedule {
+  color: #444;
+}
+
+/* Форма рассылки */
+.subscription {
+  background-color: #F0F0F0;
+}
+
+.subscription-info {
+  color: #444;
+}
+.subscription-button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #F0F0F0;
+}
+
+.subscription-misc {
+  color: #444;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\\ Внутренняя \\\
+\\\\\\\\\\\\\\\\\*/
+
+/* Общие для внутренней */
+.main-inner {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.catalog-inner-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Хлебные крошки */
+.breadcrumbs-link {
+  opacity: 0.6;
+}
+
+/* Фильтр */
+.catalog-filter {
+  background-color: #EBEBEB;
+}
+
+.catalog-fieldset-title {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.range-slider-label {
+  font-size: 15px;
+  line-height: 18px;
+  color: #A5A5A5;
+}
+
+.range-slider-input {
+  color: inherit;
+}
+
+/* Список товаров */
+.product-card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.product-card-price {
+  line-height: 21px;
+  color: #444;
+}
+
+.product-new {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.product-load-more {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+/* Пагинация */
+.pagination {
+  background-color: #EBEBEB;
+}
+
+.pagination-prev,
+.pagination-next {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pagination-link {
+  color: #444;
+  opacity: 0.3;
+}
+
+/*\\\\\\\\\\\\\\\\
+\\\ Футер сайта \\\
+\\\\\\\\\\\\\\\\\*/
+.page-footer {
+  color: #fff;
+  background-color: #444;
+}
+
+/* Адрес и телефон */
+.footer-contacts-address {
+  font-size: 16px;
+  line-height: 19px;
+  font-style: normal;
+}
+
+/* Наши предложения */
+.footer-offers-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
