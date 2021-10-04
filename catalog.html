@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
@@ -34,7 +35,7 @@
       <nav class="main-navigation">
         <ul class="main-navigation-list">
           <li class="main-navigation-item">
-            <a class="main-navigation-link main-catalog-link" href="catalog.html">Каталог товаров</a>
+            <a class="main-navigation-link uppercase-link" href="catalog.html">Каталог товаров</a>
             <button class="main-catalog-button" type="button">
               <span class="visually-hidden">Развернуть быстрое меню каталога</span>
             </button>
@@ -43,13 +44,13 @@
                 <span class="visually-hidden">Виртуальная реальность и товары для съёмки</span>
                 <ul>
                   <li>
-                    <a href="#">Виртуальная реальность</a>
+                    <a class="main-navigation-link" href="#">Виртуальная реальность</a>
                   </li>
                   <li>
-                    <a href="catalog.html" aria-current="page">Моноподы для cелфи</a>
+                    <a class="main-navigation-link" href="catalog.html" aria-current="page">Моноподы для cелфи</a>
                   </li>
                   <li>
-                    <a href="#">Экшн-камеры</a>
+                    <a class="main-navigation-link" href="#">Экшн-камеры</a>
                   </li>
                 </ul>
               </li>
@@ -57,26 +58,26 @@
                 <span class="visually-hidden">Наручные гаджеты</span>
                 <ul>
                   <li>
-                    <a href="#">Фитнес-браслеты</a>
+                    <a class="main-navigation-link" href="#">Фитнес-браслеты</a>
                   </li>
                   <li>
-                    <a href="#">Умные часы</a>
+                    <a class="main-navigation-link" href="#">Умные часы</a>
                   </li>
                 </ul>
               </li>
               <li class="main-catalog-item drones">
-                <a href="#">Квадрокоптеры</a>
+                <a class="main-navigation-link" href="#">Квадрокоптеры</a>
               </li>
             </ul>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">Доставка</a>
+            <a class="main-navigation-link uppercase-link" href="#">Доставка</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">Гарантия</a>
+            <a class="main-navigation-link uppercase-link" href="#">Гарантия</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">Контакты</a>
+            <a class="main-navigation-link uppercase-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -84,7 +85,7 @@
 
     <main class="main-inner">
       <header class="header-inner">
-        <h1 class="header-inner-title">Моноподы для селфи</h1>
+        <h1 class="section-title header-inner-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -101,7 +102,7 @@
       <section class="catalog-products">
         <h2 class="visually-hidden">Каталог товаров с фильтрами</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="GET">
-          <h3 class="catalog-section-title">Фильтр:</h3>
+          <h3 class="catalog-inner-title">Фильтр:</h3>
           <fieldset class="catalog-filter-group">
             <legend class="catalog-fieldset-title">Стоимость</legend>
             <button class="range-slider-button min-price" type="button" aria-hidden="true" tabindex="-1"></button>
@@ -158,7 +159,7 @@
         </form>
 
         <form class="catalog-sorting"  action="https://echo.htmlacademy.ru/" method="GET">
-          <h3 class="catalog-section-title">Сортировка:</h3>
+          <h3 class="catalog-inner-title">Сортировка:</h3>
           <select class="catalog-sorting-select" id="sorting" name="sorting">
             <option value="popular">Сначала популярные</option>
             <option value="inexpensive">Сначала недорогие</option>
@@ -219,7 +220,7 @@
           <h3 class="visually-hidden">Переход по номерам страниц списка товаров:</h3>
           <ul class="pagination-list">
             <li class="pagination-item">
-              <a class="pagination-link pagination-prev pagination-disabled">
+              <a class="pagination-prev pagination-disabled">
                 <span class="visually-hidden" aria-hidden="true">Перейти на предыдущю страницу</span>
                 <span aria-hidden="true">Назад</span>
               </a>
@@ -240,7 +241,7 @@
               <a class="pagination-link" href="#">15</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link pagination-next" href="#">
+              <a class="pagination-next" href="#">
                 <span class="visually-hidden">Перейти на следующую страницу</span>
                 <span aria-hidden="true">Вперед</span>
               </a>
@@ -297,6 +298,7 @@
             </a>
           </li>
         </ul>
+
         <a class="htmlacademy-link" href="https://htmlacademy.ru/">
           <img class="html-academy-logo" src="images/icons/htmlacademy-logo.svg" width="115" height="33" alt="Сделано в HTML Academy">
         </a>

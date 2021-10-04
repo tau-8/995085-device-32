@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
@@ -34,7 +35,7 @@
       <nav class="main-navigation">
         <ul class="main-navigation-list">
           <li class="main-navigation-item">
-            <a class="main-navigation-link main-catalog-link" href="catalog.html">Каталог товаров</a>
+            <a class="main-navigation-link uppercase-link" href="catalog.html">Каталог товаров</a>
             <button class="main-catalog-button" type="button">
               <span class="visually-hidden">Развернуть быстрое меню каталога</span>
             </button>
@@ -43,13 +44,13 @@
                 <span class="visually-hidden">Виртуальная реальность и товары для съёмки</span>
                 <ul>
                   <li>
-                    <a href="#">Виртуальная реальность</a>
+                    <a class="main-navigation-link" href="#">Виртуальная реальность</a>
                   </li>
                   <li>
-                    <a href="catalog.html">Моноподы для cелфи</a>
+                    <a class="main-navigation-link" href="catalog.html">Моноподы для cелфи</a>
                   </li>
                   <li>
-                    <a href="#">Экшн-камеры</a>
+                    <a class="main-navigation-link" href="#">Экшн-камеры</a>
                   </li>
                 </ul>
               </li>
@@ -57,26 +58,26 @@
                 <span class="visually-hidden">Наручные гаджеты</span>
                 <ul>
                   <li>
-                    <a href="#">Фитнес-браслеты</a>
+                    <a class="main-navigation-link" href="#">Фитнес-браслеты</a>
                   </li>
                   <li>
-                    <a href="#">Умные часы</a>
+                    <a class="main-navigation-link" href="#">Умные часы</a>
                   </li>
                 </ul>
               </li>
               <li class="main-catalog-item drones">
-                <a href="#">Квадрокоптеры</a>
+                <a class="main-navigation-link" href="#">Квадрокоптеры</a>
               </li>
             </ul>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">Доставка</a>
+            <a class="main-navigation-link uppercase-link" href="#">Доставка</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">Гарантия</a>
+            <a class="main-navigation-link uppercase-link" href="#">Гарантия</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="#">Контакты</a>
+            <a class="main-navigation-link uppercase-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -90,9 +91,9 @@
         <ol class="popular-products-list">
           <li class="popular-products-item">
             <img src="images/popular-01.png" width="560" height="560" alt="Дрон-поджигатель">
-            <b>Порхает как бабочка, <br>жалит как пчела!</b>
-            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="product-details" href="">Подробнее</a>
+            <b class="product-title">Порхает как бабочка, <br>жалит как пчела!</b>
+            <p class="product-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="product-details button" href="#">Подробнее</a>
             <table class="product-specs">
               <tr>
                 <td class="product-specs-key">
@@ -115,9 +116,9 @@
 
           <li class="popular-products-item">
             <img src="images/popular-02.png" width="560" height="560" alt="Осуждающий фитнес-браслет">
-            <b>Худеем <br>правильно!</b>
-            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a class="product-details" href="">Подробнее</a>
+            <b class="product-title">Худеем <br>правильно!</b>
+            <p class="product-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a class="product-details button" href="#">Подробнее</a>
             <table class="product-specs">
               <tr>
                 <td class="product-specs-key">
@@ -134,9 +135,9 @@
 
           <li class="popular-products-item">
             <img src="images/popular-03.png" width="560" height="560" alt="Восьмиметровая селфи-палка">
-            <b>Делай селфи, <br>как Бен Стиллер! </b>
-            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-            <a class="product-details" href="">Подробнее</a>
+            <b class="product-title">Делай селфи, <br>как Бен Стиллер! </b>
+            <p class="product-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+            <a class="product-details button" href="#">Подробнее</a>
             <table class="product-specs">
               <tr>
                 <td class="product-specs-key">
@@ -219,13 +220,13 @@
 
         <ul class="offers-toggle-list">
           <li class="offers-toggle-item">
-            <button class="offers-toggle-button" type="button">Доставка</button>
+            <button class="offers-toggle-button button offer-current" type="button">Доставка</button>
           </li>
           <li class="offers-toggle-item">
-            <button class="offers-toggle-button" type="button">Гарантия</button>
+            <button class="offers-toggle-button button" type="button">Гарантия</button>
           </li>
           <li class="offers-toggle-item">
-            <button class="offers-toggle-button" type="button">Кредит</button>
+            <button class="offers-toggle-button button" type="button">Кредит</button>
           </li>
         </ul>
 
@@ -258,10 +259,10 @@
           <li class="about-transport-companies-item">
             <p>Меловые линии</p>
           </li>
-          <li class="astrongout-transport-companies-item">
+          <li class="about-transport-companies-item">
             <p>СДИК</p>
           </li>
-          <li class="astrongout-transport-companies-item">
+          <li class="about-transport-companies-item">
             <p>ТоксБерри</p>
           </li>
         </ul>
@@ -281,7 +282,7 @@
           <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
           <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
-        <a class="button button-feedback" href="#">Напишите нам</a>
+        <a class="button-feedback button" href="#">Напишите нам</a>
       </section>
 
       <section class="subscription">
@@ -345,6 +346,7 @@
             </a>
           </li>
         </ul>
+
         <a class="htmlacademy-link" href="https://htmlacademy.ru/">
           <img class="html-academy-logo" src="images/icons/htmlacademy-logo.svg" width="115" height="33" alt="Сделано в HTML Academy">
         </a>
