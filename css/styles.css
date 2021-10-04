@@ -46,8 +46,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #000;
-  background-color: #FFF;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 a {
@@ -110,12 +110,12 @@ a {
 }
 
 .product-description {
-  color: #444;
+  color: #444444;
 }
 
 .product-specs-key {
   font-size: 16px;
-  color: #444;
+  color: #444444;
 }
 
 .product-specs-value {
@@ -131,16 +131,16 @@ a {
 
 /* Предложения */
 .offers {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .offer-description {
-  color: #444;
+  color: #444444;
 }
 
 /* Доставка */
 .delivery {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .delivery-button {
@@ -154,7 +154,7 @@ a {
 
 /* О нас */
 .about-info {
-  color: #444;
+  color: #444444;
 }
 
 .about-transport-companies-item {
@@ -164,18 +164,18 @@ a {
 
 /* Контакты */
 .contacts-description {
-  color: #444;
+  color: #444444;
 }
 
 .contacts-subtitle {
   font-weight: 700;
   font-size: 24px;
-  color: #444;
+  color: #444444;
 }
 
 .contacts-address {
   font-style: normal;
-  color: #444;
+  color: #444444;
 }
 
 .contacts-address-phone {
@@ -183,17 +183,18 @@ a {
 }
 
 .contacts-schedule {
-  color: #444;
+  color: #444444;
 }
 
 /* Форма рассылки */
 .subscription {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .subscription-info {
-  color: #444;
+  color: #444444;
 }
+
 .subscription-button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -201,11 +202,11 @@ a {
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .subscription-misc {
-  color: #444;
+  color: #444444;
 }
 
 /*\\\\\\\\\\\\\\\\
@@ -233,7 +234,7 @@ a {
 
 /* Фильтр */
 .catalog-filter {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
 
 .catalog-fieldset-title {
@@ -245,7 +246,7 @@ a {
 .range-slider-label {
   font-size: 15px;
   line-height: 18px;
-  color: #A5A5A5;
+  color: #a5a5a5;
 }
 
 .range-slider-input {
@@ -262,7 +263,7 @@ a {
 
 .product-card-price {
   line-height: 21px;
-  color: #444;
+  color: #444444;
 }
 
 .product-new {
@@ -282,12 +283,12 @@ a {
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 /* Пагинация */
 .pagination {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
 
 .pagination-prev,
@@ -300,7 +301,7 @@ a {
 }
 
 .pagination-link {
-  color: #444;
+  color: #444444;
   opacity: 0.3;
 }
 
@@ -308,8 +309,8 @@ a {
 \\\ Футер сайта \\\
 \\\\\\\\\\\\\\\\\*/
 .page-footer {
-  color: #fff;
-  background-color: #444;
+  color: #ffffff;
+  background-color: #444444;
 }
 
 /* Адрес и телефон */
