@@ -59,6 +59,7 @@ body {
 .button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
+  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-align: center;
@@ -81,19 +82,28 @@ body {
   background-color: #ffe17f;
 }
 
-.userbar-item,
+.userbar-item {
+  text-align: center;
+}
+
 .main-navigation-item {
   text-align: center;
 }
 
-.userbar-link,
+.userbar-link {
+  font-size: 16px;
+  line-height: 19px;
+}
+
 .main-navigation-link {
+  font-size: 16px;
   line-height: 19px;
 }
 
 .uppercase-link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
+  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -117,11 +127,13 @@ body {
 
 .product-specs-key {
   font-size: 16px;
+  line-height: 30px;
   color: #444444;
 }
 
 .product-specs-value {
   font-size: 36px;
+  line-height: 30px;
 }
 
 /* Категории */
@@ -161,6 +173,7 @@ body {
 
 .about-transport-companies-item {
   font-weight: 700;
+  font-size: 18px;
   line-height: 20px;
 }
 
@@ -172,6 +185,7 @@ body {
 .contacts-subtitle {
   font-weight: 700;
   font-size: 24px;
+  line-height: 30px;
   color: #444444;
 }
 
@@ -200,6 +214,7 @@ body {
 .subscription-button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
+  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-align: center;
@@ -224,6 +239,7 @@ body {
 .catalog-inner-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
+  font-size: 16px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -241,6 +257,7 @@ body {
 
 .catalog-fieldset-title {
   font-weight: 700;
+  font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
 }
@@ -264,6 +281,7 @@ body {
 }
 
 .product-card-price {
+  font-size: 18px;
   line-height: 21px;
   color: #444444;
 }
