@@ -50,12 +50,12 @@ body {
   background-color: #ffffff;
 }
 
-a {
+/* По КЛАССАМ */
+.link {
   text-decoration: none;
   color: inherit;
 }
 
-/* По КЛАССАМ */
 .button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -63,6 +63,8 @@ a {
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
 }
 
 .section-title {
