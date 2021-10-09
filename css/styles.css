@@ -89,6 +89,12 @@ body {
   margin: 0 auto;
 }
 
+.header-inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /*\\\\\\\\\\\\\\\\
 \\\ Шапка сайта \\\
 \\\\\\\\\\\\\\\\\*/
