@@ -95,6 +95,29 @@ body {
   justify-content: space-between;
 }
 
+.offers-container {
+  display: flex;
+}
+
+.about-contacts-container {
+  display: flex;
+}
+
+.subscription-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-inner-container {
+  display: flex;
+  flex-direction: column;
+}
+
 /*\\\\\\\\\\\\\\\\
 \\\ Шапка сайта \\\
 \\\\\\\\\\\\\\\\\*/
@@ -156,6 +179,15 @@ body {
   line-height: 50px;
 }
 
+.popular-products-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-y: hidden; /* Временное свойство */
+}
+
 .product-description {
   color: #444444;
 }
@@ -171,7 +203,22 @@ body {
   line-height: 30px;
 }
 
+.slider-pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 /* Категории */
+.product-categories-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .product-categories-link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -181,6 +228,18 @@ body {
 /* Предложения */
 .offers {
   background-color: #f0f0f0;
+}
+
+.offers-toggle-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.offers-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .offer-description {
@@ -377,6 +436,13 @@ body {
 }
 
 /* Наши предложения */
+.footer-offers-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .footer-offers-link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -385,4 +451,12 @@ body {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+/* Давайте дружить */
+.footer-social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
