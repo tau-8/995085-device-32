@@ -114,6 +114,13 @@ body {
   text-align: center;
 }
 
+.main-navigation-list {
+  width: 500px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .main-navigation-item {
   text-align: center;
 }
