@@ -137,8 +137,7 @@ body {
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: 3.25fr 6.75fr;
-  grid-template-rows: 70px 1140px 117px;
+  grid-template-columns: 1fr 328px 832px 1fr;
 }
 
 /*\\\\\\\\\\\\\\\\
@@ -355,6 +354,8 @@ body {
 }
 
 .catalog-inner-title {
+  margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -379,18 +380,24 @@ body {
 .catalog-filter {
   display: flex;
   flex-direction: column;
-  grid-column: 1 / 2;
+  align-items: flex-end;
+  grid-column: 1 / 3;
   grid-row: 1 / 4;
   background-color: #ebebeb;
 }
 
+.filter-title-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  min-height: 70px;
+  background-color: #dcdcdc;
+}
+
 .filter-title {
   display: block;
-  margin: 0;
-  padding: 0;
-  height: 70px;
-  text-align: center;
-  background-color: #dcdcdc;
+  width: 328px;
 }
 
 .catalog-filter-group {
@@ -423,22 +430,36 @@ body {
 /* Сортировка */
 .catalog-sorting {
   display: flex;
-  flex-wrap: nowrap;
-  grid-column: 2 / 3;
+  align-items: center;
+  min-height: 70px;
+  grid-column: 3 / 5;
   grid-row: 1 / 2;
   background-color: #ebebeb;
 }
 
 /* Список товаров */
 .products {
-  grid-column: 2 / 3;
+  display: grid;
+  width: 800px;
+  padding-top: 69px;
+  justify-self: end;
+  grid-column: 3 / 4;
   grid-row: 2 / 3;
 }
 
 .product-list {
   display: grid;
+  margin: 0;
+  padding: 0;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  justify-items: end;
+  list-style: none;
+}
+
+.product-card {
+  width: 360px;
+  height: 506px;
+  margin-left: 40px;
 }
 
 .product-card-title {
@@ -466,6 +487,8 @@ body {
 }
 
 .product-load-more {
+  width: 760px;
+  justify-self: end;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -476,9 +499,13 @@ body {
 
 /* Пагинация */
 .pagination {
-  grid-column: 2 / 3;
+  grid-column: 3 / 4;
   grid-row: 3 / 4;
-  height: 70px;
+  align-self: center;
+  justify-self: center;
+  width: 760px;
+  min-height: 70px;
+  margin-left: 72px;
   background-color: #ebebeb;
 }
 
