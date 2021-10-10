@@ -380,6 +380,12 @@ body {
 }
 
 /* Список товаров */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
 .product-card-title {
   font-weight: 700;
   font-size: 18px;
