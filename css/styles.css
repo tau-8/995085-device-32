@@ -124,6 +124,12 @@ body {
   flex-direction: column;
 }
 
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 3.25fr 6.75fr;
+  grid-template-rows: 70px 1140px 117px;
+}
+
 /*\\\\\\\\\\\\\\\\
 \\\ Шапка сайта \\\
 \\\\\\\\\\\\\\\\\*/
