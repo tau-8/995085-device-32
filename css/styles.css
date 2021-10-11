@@ -137,7 +137,7 @@ body {
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: 1fr 328px 832px 1fr;
+  grid-template-columns: 328px 832px;
 }
 
 /*\\\\\\\\\\\\\\\\
@@ -353,6 +353,10 @@ body {
   line-height: 19px;
 }
 
+.catalog-products {
+  background-color: #ebebeb;
+}
+
 .catalog-inner-title {
   margin: 0;
   padding: 0;
@@ -381,23 +385,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  grid-column: 1 / 3;
+  grid-column: 1 / 2;
   grid-row: 1 / 4;
   background-color: #ebebeb;
 }
 
-.filter-title-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  align-self: stretch;
-  min-height: 70px;
-  background-color: #dcdcdc;
-}
-
 .filter-title {
   display: block;
+  position: relative;
+  min-height: 70px;
   width: 328px;
+  z-index: 1;
+}
+
+.filter-title::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  right: 0;
+  background-color: #dcdcdc;
+  z-index: -1;
 }
 
 .catalog-filter-group {
@@ -432,7 +440,7 @@ body {
   display: flex;
   align-items: center;
   min-height: 70px;
-  grid-column: 3 / 5;
+  grid-column: 2 / 3;
   grid-row: 1 / 2;
   background-color: #ebebeb;
 }
@@ -443,17 +451,30 @@ body {
   width: 800px;
   padding-top: 69px;
   justify-self: end;
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
 
 .product-list {
   display: grid;
+  position: relative;
   margin: 0;
   padding: 0;
   grid-template-columns: repeat(2, 1fr);
   justify-items: end;
   list-style: none;
+  z-index: 1;
+}
+
+.product-list::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -69px;
+  left: -200vw;
+  height: calc(100% + 69px);
+  width: 100vw;
+  box-shadow: calc(200vw - 32px) 0 0 0 #ffffff;
 }
 
 .product-card {
@@ -499,14 +520,14 @@ body {
 
 /* Пагинация */
 .pagination {
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
   grid-row: 3 / 4;
   align-self: center;
   justify-self: center;
   width: 760px;
   min-height: 70px;
   margin-left: 72px;
-  background-color: #ebebeb;
+  background-color: #ffffff;
 }
 
 .pagination-list {
@@ -514,6 +535,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: #ebebeb;
 }
 
 .pagination-prev,
