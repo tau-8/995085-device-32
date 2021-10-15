@@ -12,67 +12,64 @@
         <img class="header__logo device-logo" src="images/device-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device»">
       </a>
 
-      <div class="header__centerer">
-        <form class="header__search site-search" action="#" method="POST">
-          <label class="site-search__label">
-            <span class="visually-hidden">Поиск по сайту</span>
-            <input class="site-search__field" type="search" placeholder="Поиск по сайту">
-          </label>
-          <button class="visually-hidden" type="submit">Искать</button>
-        </form>
+      <form class="header__search site-search" action="#" method="POST">
+        <label class="site-search__label">
+          <span class="visually-hidden">Поиск по сайту</span>
+          <input class="site-search__field" type="search" placeholder="Поиск по сайту">
+        </label>
+        <button class="visually-hidden" type="submit">Искать</button>
+      </form>
 
-        <ul class="header__user-menu user-menu">
-          <li class="user-menu__item">
-            <a class="user-menu__link user-menu__link--login link" href="#">Войти</a>
-          </li>
-          <li class="user-menu__item">
-            <a class="user-menu__link user-menu__link--compare link" href="#">Сравнить</a>
-          </li>
-          <li class="user-menu__item">
-            <a class="user-menu__link user-menu__link--cart link" href="#">Корзина</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="header__user-menu user-menu">
+        <li class="user-menu__item">
+          <a class="user-menu__link user-menu__link--login link" href="#">Войти</a>
+        </li>
+        <li class="user-menu__item">
+          <a class="user-menu__link user-menu__link--compare link" href="#">Сравнить</a>
+        </li>
+        <li class="user-menu__item">
+          <a class="user-menu__link user-menu__link--cart link" href="#">Корзина</a>
+        </li>
+      </ul>
 
       <nav class="header__centerer">
-        <div class="catalog-menu">
-          <a class="main-navigation-link uppercase-link link" href="catalog.html">Каталог товаров</a>
-          <button class="catalog-menu-button" type="button">
-            <span class="visually-hidden">Развернуть быстрое меню каталога</span>
-          </button>
-          <ul class="catalog-menu-list">
-            <li class="catalog-menu-item cameras">
-              <span class="visually-hidden">Виртуальная реальность и товары для съёмки</span>
-              <ul>
-                <li>
-                  <a class="main-navigation-link link" href="#">Виртуальная реальность</a>
-                </li>
-                <li>
-                  <a class="main-navigation-link link" href="catalog.html">Моноподы для cелфи</a>
-                </li>
-                <li>
-                  <a class="main-navigation-link link" href="#">Экшн-камеры</a>
-                </li>
-              </ul>
-            </li>
-            <li class="catalog-menu-item watches">
-              <span class="visually-hidden">Наручные гаджеты</span>
-              <ul>
-                <li>
-                  <a class="main-navigation-link link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li>
-                  <a class="main-navigation-link link" href="#">Умные часы</a>
-                </li>
-              </ul>
-            </li>
-            <li class="catalog-menu-item drones">
-              <a class="main-navigation-link link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
-        </div>
-
         <ul class="header__navigation site-navigation">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link uppercase-link link" href="catalog.html">Каталог товаров</a>
+            <button class="site-navigation__button" type="button">
+              <span class="visually-hidden">Развернуть быстрое меню каталога</span>
+            </button>
+            <ul class="site-navigation__dropdown catalog-dropdown">
+              <li class="catalog-dropdown__item cameras">
+                <span class="visually-hidden">Виртуальная реальность и товары для съёмки</span>
+                <ul>
+                  <li>
+                    <a class="catalog-dropdown__link link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li>
+                    <a class="catalog-dropdown__link link" href="catalog.html">Моноподы для cелфи</a>
+                  </li>
+                  <li>
+                    <a class="catalog-dropdown__link link" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-dropdown__item watches">
+                <span class="visually-hidden">Наручные гаджеты</span>
+                <ul>
+                  <li>
+                    <a class="catalog-dropdown__link link" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li>
+                    <a class="catalog-dropdown__link link" href="#">Умные часы</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-dropdown__item drones">
+                <a class="catalog-dropdown__link link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
           <li class="site-navigation__item">
             <a class="site-navigation__link link link--uppercase" href="#">Доставка</a>
           </li>
