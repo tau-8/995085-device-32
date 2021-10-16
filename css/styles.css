@@ -45,7 +45,7 @@ html {
   height: 100%;
 }
 
-body {
+.page {
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -75,6 +75,15 @@ body {
   color: inherit;
 }
 
+.link--uppercase {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -97,32 +106,19 @@ body {
 /*\\\\\\\\\\\\\\\\
 \\\\\ Обертки \\\\\
 \\\\\\\\\\\\\\\\\*/
-.page-container {
+.page__centerer {
   width: 1160px;
   margin: 0 auto;
 }
 
-.header-inner-container {
+.header__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.main-container {
+.page__index {
   flex-grow: 1;
-}
-
-.offers-container {
-  display: flex;
-}
-
-.about-contacts-container {
-  display: flex;
-}
-
-.subscription-container {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .footer-container {
@@ -143,50 +139,48 @@ body {
 /*\\\\\\\\\\\\\\\\
 \\\ Шапка сайта \\\
 \\\\\\\\\\\\\\\\\*/
-.page-header {
+.header {
   color: #000000;
   background-color: #ffe17f;
 }
 
-.user-navigation-list {
+.header__user-menu {
   width: 500px;
+}
+
+.user-menu {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.user-navigation-item {
+.user-menu__item {
   text-align: center;
 }
 
-.main-navigation-list {
+.user-menu__link {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.site-navigation__list {
   width: 500px;
+}
+
+.site-navigation {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.main-navigation-item {
+.site-navigation__item {
   text-align: center;
 }
 
-.user-navigation-link {
+
+.site-navigation__link {
   font-size: 16px;
   line-height: 19px;
-}
-
-.main-navigation-link {
-  font-size: 16px;
-  line-height: 19px;
-}
-
-.uppercase-link {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 
 /*\\\\\\\\\\\\\\\\
@@ -194,14 +188,7 @@ body {
 \\\\\\\\\\\\\\\\\*/
 
 /* Популярные товары */
-.product-title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-}
-
-.popular-products-list {
+.popular__list {
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -210,22 +197,29 @@ body {
   overflow-y: hidden; /* Временное свойство */
 }
 
-.product-description {
+.product__slogan {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.product__info {
   color: #444444;
 }
 
-.product-specs-key {
+.product__spec-key {
   font-size: 16px;
   line-height: 30px;
   color: #444444;
 }
 
-.product-specs-value {
+.product__spec-value {
   font-size: 36px;
   line-height: 30px;
 }
 
-.slider-pagination {
+.dot-pagination {
   display: flex;
   margin: 0;
   padding: 0;
@@ -233,7 +227,7 @@ body {
 }
 
 /* Категории */
-.product-categories-list {
+.categories__list {
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -241,30 +235,30 @@ body {
   list-style: none;
 }
 
-.product-categories-link {
+.categories__link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 /* Предложения */
-.offers {
+.services {
   background-color: #f0f0f0;
 }
 
-.offers-toggle-list {
+.services__toggle-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.offers-list {
+.services__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.offer-description {
+.services__info {
   color: #444444;
 }
 
@@ -274,7 +268,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.delivery-button {
+.delivery__button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -284,38 +278,38 @@ body {
 }
 
 /* О нас */
-.about-info {
+.about__info {
   color: #444444;
 }
 
-.about-transport-companies-item {
+.about__companies-item {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
 }
 
 /* Контакты */
-.contacts-description {
+.contacts__info {
   color: #444444;
 }
 
-.contacts-subtitle {
+.contacts__subtitle {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: #444444;
 }
 
-.contacts-address {
+.contacts__address {
   font-style: normal;
   color: #444444;
 }
 
-.contacts-address-phone {
+.contacts__phone {
   text-decoration: underline;
 }
 
-.contacts-schedule {
+.contacts__schedule {
   color: #444444;
 }
 
@@ -324,11 +318,11 @@ body {
   background-color: #f0f0f0;
 }
 
-.subscription-info {
+.subscription__info {
   color: #444444;
 }
 
-.subscription-button {
+.email-form__button {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -339,7 +333,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.subscription-misc {
+.subscription__misc-info {
   color: #444444;
 }
 
@@ -555,27 +549,27 @@ body {
 /*\\\\\\\\\\\\\\\\
 \\\ Футер сайта \\\
 \\\\\\\\\\\\\\\\\*/
-.page-footer {
+.footer {
   color: #ffffff;
   background-color: #444444;
 }
 
 /* Адрес и телефон */
-.footer-contacts-address {
+.footer__contacts-address {
   font-size: 16px;
   line-height: 19px;
   font-style: normal;
 }
 
 /* Наши предложения */
-.footer-offers-list {
+.services-mini__list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.footer-offers-link {
+.services-mini__link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -586,7 +580,7 @@ body {
 }
 
 /* Давайте дружить */
-.footer-social-list {
+.social-media__list {
   display: flex;
   margin: 0;
   padding: 0;
