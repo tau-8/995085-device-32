@@ -45,7 +45,7 @@ html {
   height: 100%;
 }
 
-.page {
+.body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -103,10 +103,14 @@ html {
   line-height: 50px;
 }
 
+.body__main {
+  flex-grow: 1;
+}
+
 /*\\\\\\\\\\\\\\\\
 \\\\\ Обертки \\\\\
 \\\\\\\\\\\\\\\\\*/
-.page__centerer,
+.body__centerer,
 .catalog__centerer,
 .main__centerer,
 .services__centerer,
@@ -114,16 +118,6 @@ html {
 .footer__centerer {
   width: 1160px;
   margin: 0 auto;
-}
-
-.header__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.page__main {
-  flex-grow: 1;
 }
 
 /*\\\\\\\\\\\\\\\\
