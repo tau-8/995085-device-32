@@ -106,7 +106,12 @@ html {
 /*\\\\\\\\\\\\\\\\
 \\\\\ Обертки \\\\\
 \\\\\\\\\\\\\\\\\*/
-.page__centerer {
+.page__centerer,
+.catalog__centerer,
+.main__centerer,
+.services__centerer,
+.subscription__centerer,
+.footer__centerer {
   width: 1160px;
   margin: 0 auto;
 }
