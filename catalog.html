@@ -21,25 +21,25 @@
       </form>
 
       <ul class="header__user-menu user-menu">
-        <li class="user-menu__item">
+        <li class="user-menu__item user-menu__item--login">
           <a class="user-menu__link user-menu__link--login link" href="#">Войти</a>
         </li>
-        <li class="user-menu__item">
+        <li class="user-menu__item user-menu__item--compare">
           <a class="user-menu__link user-menu__link--compare link" href="#">Сравнить</a>
         </li>
-        <li class="user-menu__item">
+        <li class="user-menu__item user-menu__item--cart">
           <a class="user-menu__link user-menu__link--cart link" href="#">Корзина</a>
         </li>
       </ul>
 
       <nav class="header__navigation site-navigation">
         <ul class="site-navigation__list">
-          <li class="site-navigation__item">
-            <a class="site-navigation__link uppercase-link link" href="catalog.html">Каталог товаров</a>
+          <li class="site-navigation__item site-navigation__item--catalog">
+            <a class="site-navigation__link site-navigation__link--catalog link link--uppercase" href="catalog.html">Каталог товаров</a>
             <button class="site-navigation__button" type="button">
               <span class="visually-hidden">Развернуть быстрое меню каталога</span>
             </button>
-            <ul class="site-navigation__dropdown catalog-dropdown">
+            <ul class="site-navigation__dropdown catalog-dropdown visually-hidden">
               <li class="catalog-dropdown__item cameras">
                 <span class="visually-hidden">Виртуальная реальность и товары для съёмки</span>
                 <ul>
@@ -73,11 +73,11 @@
           <li class="site-navigation__item">
             <a class="site-navigation__link link link--uppercase" href="#">Доставка</a>
           </li>
-          <li class="main-navigation-item">
-            <a class="main-navigation-link link link--uppercase" href="#">Гарантия</a>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link link link--uppercase" href="#">Гарантия</a>
           </li>
-          <li class="main-navigation-item">
-            <a class="main-navigation-link link link--uppercase" href="#">Контакты</a>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link link link--uppercase" href="#">Контакты</a>
           </li>
         </ul>
       </nav>

@@ -75,6 +75,10 @@ html {
   color: inherit;
 }
 
+.link:hover {
+  text-decoration: underline; /* Временно */
+}
+
 .link--uppercase {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -124,15 +128,37 @@ html {
 \\\ Шапка сайта \\\
 \\\\\\\\\\\\\\\\\*/
 .header {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 40px minmax(50px, 1fr);
+  row-gap: 20px;
+  grid-template-areas:
+    "search user"
+    "nav nav";
+  width: 1080px;
+  padding: 79px 40px 0 40px;
   color: #000000;
-  background-color: #ffe17f;
+  background-image: linear-gradient(transparent 40px, #ffe17f 40px);
+}
+
+.header__index-link {
+  position: absolute;
+  left: 61px;
+  top: 17px;
+}
+
+.header__search {
+  grid-area: search;
 }
 
 .header__user-menu {
-  width: 500px;
+  grid-area: user;
 }
 
 .user-menu {
+  display: flex;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -142,29 +168,87 @@ html {
   text-align: center;
 }
 
+.user-menu__item--login {
+  margin-right: auto;
+}
+
+.user-menu__item--compare {
+  margin-right: 20px;
+}
+
 .user-menu__link {
+  display: block;
   font-size: 16px;
   line-height: 19px;
 }
 
-.site-navigation__list {
-  width: 500px;
+.user-menu__link--login {
+  padding: 10px 21px 9px 45px;
 }
 
-.site-navigation {
+.user-menu__link--compare {
+  padding: 10px 19px 9px 39px;
+}
+
+.user-menu__link--cart {
+  padding: 10px 20px 9px 42px;
+}
+
+.header__navigation {
+  grid-area: nav;
+}
+
+.site-navigation__list {
+  display: grid;
+  grid-template-columns: 540px repeat(3, 1fr);
+  align-items: stretch;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.site-navigation__item {
+.site-navigation__item--catalog {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.site-navigation__link {
+  display: block;
+  padding: 15px 18px 15px 18px;
   text-align: center;
 }
 
+.site-navigation__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-.site-navigation__link {
-  font-size: 16px;
-  line-height: 19px;
+.catalog-dropdown {
+  display: flex;
+  align-items: flex-start;
+  width: 1115px;
+  padding: 31px 0 52px 45px;
+  background-color: #ffe17f;
+}
+
+.site-navigation__dropdown ul {
+  margin: 0;
+  margin-right: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation__dropdown li {
+  margin-bottom: 9px;
+}
+
+.catalog-dropdown__link {
+  display: block;
+  padding: 3px 15px 5px 15px;
 }
 
 /*\\\\\\\\\\\\\\\\
