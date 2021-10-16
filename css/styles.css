@@ -629,19 +629,70 @@ html {
   background-color: #444444;
 }
 
+.footer__container {
+  position: relative;
+  padding-top: 133px;
+  padding-bottom: 61px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 300px 560px 300px;
+  grid-template-rows: minmax(87px, 1fr) 40px;
+  grid-template-areas:
+    "contacts services ."
+    ". social devs";
+}
+
+/* Логотип-ссылка */
+.footer__index-link {
+  position: absolute;
+  top: 62px;
+}
+
 /* Адрес и телефон */
+.footer__contacts {
+  grid-area: contacts;
+}
+
 .footer__contacts-address {
+  padding-right: 25px;
+  padding-bottom: 49px;
   font-size: 16px;
   line-height: 19px;
   font-style: normal;
 }
 
+.footer__contacts-text {
+  margin: 0;
+}
+
+.footer__contacts-phone {
+  position: absolute;
+  right: 0;
+  top: calc(133px + (1em / 2));
+}
+
 /* Наши предложения */
+.footer__services {
+  grid-area: services;
+  justify-self: center;
+}
+
 .services-mini__list {
   display: flex;
   margin: 0;
   padding: 0;
+  padding-top: 4px;
   list-style: none;
+}
+
+.services-mini__item {
+  margin-right: 32px;
+}
+
+.services-mini__item:last-child {
+  margin-right: 0;
 }
 
 .services-mini__link {
@@ -649,15 +700,42 @@ html {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
-  text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-/* Давайте дружить */
+/* Соцсети */
+.footer__social {
+  grid-area: social;
+  justify-self: center;
+}
+
 .social-media__list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.social-media__item {
+  margin-right: 15px;
+}
+
+.social-media__item:last-child {
+  margin-right: 0;
+}
+
+.social-media__button {
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  outline: 1px dashed #ffe17f; /* Временно */
+  outline-offset: -1px; /* Временно */
+}
+
+/* Разработчики */
+.footer__devs-link {
+  grid-area: devs;
+  justify-self: end;
 }
