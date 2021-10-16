@@ -126,16 +126,6 @@ html {
   flex-grow: 1;
 }
 
-.footer-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.footer-inner-container {
-  display: flex;
-  flex-direction: column;
-}
-
 /*\\\\\\\\\\\\\\\\
 \\\ Шапка сайта \\\
 \\\\\\\\\\\\\\\\\*/
