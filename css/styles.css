@@ -260,16 +260,52 @@ html {
 \\\\\\\\\\\\\\\\\*/
 
 /* Популярные товары */
-.popular__list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.popular {
+  width: 1160px;
+  height: 560px;
+  position: relative;
+  background-image: linear-gradient(#ffe17f 150px, transparent 150px);
   overflow-y: hidden; /* Временное свойство */
 }
 
+.popular__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: translateY(0);
+}
+
+.product {
+  flex-shrink: 0;
+  width: 1160px;
+  height: 560px;
+  display: grid;
+  grid-template-columns: 560px 560px;
+  grid-template-rows:
+    minmax(220px, auto)
+    minmax(115px, auto)
+    minmax(104px, auto)
+    minmax(110px, auto);
+  grid-template-areas:
+    "image slogan"
+    "image info"
+    "image button"
+    "image specs";
+  column-gap: 40px;
+  justify-items: start;
+}
+
+.product__image {
+  grid-area: image;
+  max-width: 100%;
+  height: auto;
+}
+
 .product__slogan {
+  grid-area: slogan;
+  align-self: end;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -277,7 +313,26 @@ html {
 }
 
 .product__info {
+  grid-area: info;
+  align-self: start;
+  margin: 0;
+  padding-top: 29px;
   color: #444444;
+}
+
+.product__button {
+  grid-area: button;
+}
+
+.product__specs tbody {
+  display: flex;
+  column-gap: 20px;
+}
+
+.product__specs tr {
+  display: flex;
+  flex-direction: column;
+  row-gap: 11px;
 }
 
 .product__spec-key {
@@ -287,8 +342,35 @@ html {
 }
 
 .product__spec-value {
+  order: -1;
   font-size: 36px;
   line-height: 30px;
+}
+
+.popular__buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  width: 560px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px;
+}
+
+.slider-controls__button {
+  width: 40px;
+  height: 80px;
+  background: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  outline: 1px dashed #444444;
 }
 
 .dot-pagination {
