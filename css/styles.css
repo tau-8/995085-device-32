@@ -673,35 +673,32 @@ html {
 \\\\ Внутренняя \\\
 \\\\\\\\\\\\\\\\\*/
 
-/* Общие для внутренней */
+/* Шапка внутренней */
 .inner-header {
+  box-sizing: border-box;
+  padding: 74px 0 49px 60px;
   font-size: 16px;
   line-height: 19px;
+  background-image: linear-gradient(#ffe17f 37px, transparent 37px);
 }
 
-.catalog {
-  font-size: 16px;
-  line-height: 19px;
-  background-color: #ebebeb;
-}
-
-.catalog__title {
+.inner-header__title {
   margin: 0;
-  padding: 0;
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
-/* Хлебные крошки */
-.breadcrumbs {
-  display: flex;
+.inner-header__breadcrumbs {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs__item {
+  margin-right: 35px;
 }
 
 .breadcrumbs__link {
@@ -709,9 +706,24 @@ html {
 }
 
 /* Каталог */
+.catalog {
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #ebebeb;
+}
+
 .catalog__grid {
   display: grid;
   grid-template-columns: 328px 832px;
+}
+
+.catalog__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 /* Фильтр */
@@ -724,49 +736,139 @@ html {
   background-color: #ebebeb;
 }
 
-.filters__title {
-  display: block;
+.filters__title-container {
   position: relative;
+  box-sizing: border-box;
   min-height: 70px;
   width: 328px;
+  margin-bottom: 69px;
+  padding: 25px 0 0 60px;
   z-index: 1;
 }
 
-.filters__title::before {
+.filters__title-container::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100vw;
+  top: 0;
   right: 0;
   background-color: #dcdcdc;
   z-index: -1;
 }
 
+.filters__title {
+  margin: 0;
+}
+
+.filters__label {
+  font-size: 16px;
+  line-height: 19px;
+}
+
 .filters__group {
-  width: 280px;
-  align-self: end;
+  position: relative;
+  box-sizing: border-box;
+  width: 328px;
+  margin: 0;
+  padding: 14px 69px 0 60px;
+  border: 0;
+}
+
+.filters__group::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  border-top: 2px solid #000000;
 }
 
 .filters__legend {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 29px;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
 }
 
-.filters__label--slider {
+.filters__sliders {
+  margin-bottom: 34px;
+}
+
+.range-sliders {
+  display: grid;
+  grid-template-rows: 25px 19px;
+}
+
+.range-sliders__container {
+  display: flex;
+}
+
+.range-sliders__label {
+  display: flex;
+  flex-wrap: nowrap;
   font-size: 15px;
   line-height: 18px;
   color: #a5a5a5;
 }
 
-.filters__range-input {
+.range-sliders__input {
+  width: 100%;
   color: inherit;
+  background: none;
+  border: none;
+}
+
+.filters__input-list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 44px;
+  list-style-type: none;
+}
+
+.filters__input-item {
+  position: relative;
+  padding-left: 37px;
+  padding-bottom: 21px;
+}
+
+.filters__input-item:last-child {
+  padding-bottom: 0;
+}
+
+.filters__label--checkbox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+}
+
+.filters__label--radio::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 20px;
 }
 
 .filters__button {
-  width: 280px;
-  align-self: end;
+  align-self: start;
+  width: 199px;
+  margin-left: 60px;
 }
 
 /* Сортировка */
