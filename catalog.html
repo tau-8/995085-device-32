@@ -104,20 +104,28 @@
           <h2 class="visually-hidden">Каталог товаров с фильтрами</h2>
 
           <form class="catalog__filter filters" action="https://echo.htmlacademy.ru/" method="GET">
-            <h3 class="catalog__title filters__title">Фильтр:</h3>
+            <div class="filters__title-container">
+              <h3 class="catalog__title filters__title">Фильтр:</h3>
+            </div>
             <fieldset class="filters__group">
-              <legend class="filters__legend">Стоимость</legend>
-              <button class="filters__range-slider filters__range-slider--min" type="button" aria-hidden="true" tabindex="-1"></button>
-              <button class="filters__range-slider filters__range-slider--max" type="button" aria-hidden="true" tabindex="-1"></button>
-              <label class="filters__label filters__label--slider">
-                от <input class="filters__range-input" type="number" name="min-price" value="0">
-              </label>
-              <label class="filters__label filters__label--slider">
-                до <input class="filters__range-input" type="number" name="max-price" value="5000">
-              </label>
+              <span><legend class="filters__legend">Стоимость</legend></span>
+              <div class="filters__sliders range-sliders">
+                <div class="range-sliders__container">
+                  <button class="range-sliders__knob range-sliders__knob--min" type="button" aria-hidden="true" tabindex="-1"></button>
+                  <button class="range-sliders__knob range-sliders__knob--max" type="button" aria-hidden="true" tabindex="-1"></button>
+                </div>
+                <div class="range-sliders__container">
+                  <label class="filters__label range-sliders__label">
+                    от <input class="range-sliders__input" type="number" name="min-price" value="0">
+                  </label>
+                  <label class="filters__label range-sliders__label">
+                    до <input class="range-sliders__input" type="number" name="max-price" value="5000">
+                  </label>
+                </div>
+              </div>
             </fieldset>
             <fieldset class="filters__group">
-              <legend class="filters__legend">Цвет</legend>
+              <span><legend class="filters__legend">Цвет</legend></span>
               <ul class="filters__input-list">
                 <li class="filters__input-item">
                   <input class="filters__checkbox visually-hidden" type="checkbox" id="checkbox-black" name="filter-colors" value="black" checked>
@@ -142,7 +150,7 @@
               </ul>
             </fieldset>
             <fieldset class="filters__group">
-              <legend class="filters__legend">Bluetooh</legend>
+              <span><legend class="filters__legend">Bluetooh</legend></span>
               <ul class="filters__input-list">
                 <li class="filters__input-item">
                   <input class="filters__radio visually-hidden" type="radio" id="radio-bluetooth-true" name="filter-has-bluetooth" value="true" checked>
