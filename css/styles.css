@@ -168,7 +168,7 @@ html {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .user-menu__item {
@@ -211,7 +211,7 @@ html {
   align-items: stretch;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .site-navigation__item--catalog {
@@ -233,7 +233,7 @@ html {
   left: 0;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   z-index: 10;
 }
 
@@ -249,7 +249,7 @@ html {
   margin: 0;
   margin-right: 15px;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .site-navigation__dropdown li {
@@ -280,7 +280,7 @@ html {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   transform: translateY(0);
 }
 
@@ -384,7 +384,7 @@ html {
   display: flex;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 /* Категории */
@@ -397,7 +397,7 @@ html {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .categories__link {
@@ -440,7 +440,7 @@ html {
   padding-top: 80px;
   padding-bottom: 70px;
   border-right: 7px solid #000000;
-  list-style: none;
+  list-style-type: none;
 }
 
 .services__toggle-button {
@@ -457,7 +457,7 @@ html {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .services__item {
@@ -701,7 +701,7 @@ html {
   display: flex;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .breadcrumbs__link {
@@ -796,7 +796,7 @@ html {
   padding: 0;
   grid-template-columns: repeat(2, 1fr);
   justify-items: end;
-  list-style: none;
+  list-style-type: none;
   z-index: 1;
 }
 
@@ -868,7 +868,7 @@ html {
   display: flex;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   background-color: #ebebeb;
 }
 
@@ -951,7 +951,7 @@ html {
   margin: 0;
   padding: 0;
   padding-top: 4px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .services-mini__link {
@@ -977,7 +977,7 @@ html {
   column-gap: 15px;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .social-media__button {
