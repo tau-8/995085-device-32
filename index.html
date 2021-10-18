@@ -219,7 +219,7 @@
 
       <section class="main__section services">
         <h2 class="visually-hidden">Наши предложения</h2>
-        <div class="services__centerer">
+        <div class="services__centerer services__grid">
           <ul class="services__toggle-list">
             <li class="services__toggle-item">
               <button class="services__toggle-button services__toggle-button--current button" type="button">Доставка</button>
@@ -251,10 +251,12 @@
 
       <section class="main__section main__centerer delivery">
         <h2 class="visually-hidden">Доставка под заказ</h2>
-        <a class="delivery__button link" href="#">Доставим редкий товар под заказ</a>
+        <a class="delivery__button link" href="#">
+          <span class="delivery__text">Доставим редкий товар под заказ</span>
+        </a>
       </section>
 
-      <div class="main__section main__centerer main__section--double">
+      <div class="main__section main__section--double main__centerer">
         <section class="about">
           <h2 class="about__title section-title">О нас</h2>
           <p class="about__info">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -272,13 +274,14 @@
           </ul>
           <a class="about__button button link" href="#">Подробнее о нас</a>
         </section>
+
         <section class="contacts">
           <h2 class="contacts__title section-title">Контакты</h2>
           <p class="contacts__info">Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете проверить работоспособность покупки.</p>
           <h3 class="contacts__subtitle">Интернет-магазин «Девайс»</h3>
           <address class="contacts__address">
             <p class="contacts__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-            <a class="contacts__address-phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <a class="contacts__phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </address>
           <h3 class="contacts__subtitle">Время работы</h3>
           <ul class="contacts__schedule">
@@ -290,14 +293,14 @@
       </div>
 
       <section class="main__section subscription">
-        <div class="subscription__centerer">
+        <div class="subscription__centerer subscription_grid">
           <h2 class="subscription__title section-title">Подпишитесь<br>на рассылку</h2>
           <p class="subscription__info">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="subscription__form email-form" action="#" method="POST">
-            <label class="email-form__label">
+            <label class="email-form__label" for="subscription-field">
               <span class="visually-hidden">Укажите ваш e-mail</span>
-              <input class="subscription__form-field email-form__field" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
             </label>
+            <input class="subscription__form-field email-form__field" id="subscription-field" placeholder="Ваш e-mail" type="email" name="newsletter-email" required>
             <button class="subscription__form-button email-form__button" type="submit">Подписаться</button>
           </form>
           <span class="subscription__misc-info">Это бесплатно</span>
