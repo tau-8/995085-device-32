@@ -504,9 +504,6 @@
 
 /* О нас */
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding-top: 49px;
   padding-right: 138px;
 }
@@ -555,9 +552,6 @@
 
 /* Контакты */
 .contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding-top: 49px;
   padding-right: 45px;
 }
