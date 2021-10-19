@@ -715,6 +715,7 @@ html {
 .catalog__grid {
   display: grid;
   grid-template-columns: 328px 832px;
+  padding-bottom: 72px;
 }
 
 .catalog__title {
@@ -878,15 +879,28 @@ html {
   min-height: 70px;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  padding-left: 72px;
   background-color: #ebebeb;
 }
 
+.sorting__title {
+  margin: 0;
+  margin-right: 53px;
+}
+
+.sorting__order {
+  padding: 0;
+  margin-left: auto;
+}
+
 /* Список товаров */
+.catalog__products {
+  margin-bottom: 51px;
+}
+
 .products {
   display: grid;
   width: 800px;
-  padding-top: 69px;
-  justify-self: end;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
@@ -894,10 +908,13 @@ html {
 .products__list {
   display: grid;
   position: relative;
+  grid-template-columns: repeat(2, 360px);
+  justify-items: end;
+  column-gap: 40px;
   margin: 0;
   padding: 0;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: end;
+  padding-top: 69px;
+  padding-left: 72px;
   list-style-type: none;
   z-index: 1;
 }
@@ -906,17 +923,24 @@ html {
   content: "";
   position: absolute;
   z-index: -1;
-  top: -69px;
+  top: 0;
   left: -200vw;
-  height: calc(100% + 69px);
+  height: calc(100% + 110px);
   width: 100vw;
-  box-shadow: calc(200vw - 32px) 0 0 0 #ffffff;
+  box-shadow: 200vw 0 0 0 #ffffff;
 }
 
 .products__card {
+  position: relative;
   width: 360px;
-  height: 506px;
-  margin-left: 40px;
+  min-height: 462px;
+  margin-bottom: 44px;
+}
+
+.card__image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 32px;
 }
 
 .card__title {
@@ -926,13 +950,41 @@ html {
   letter-spacing: -0.02em;
 }
 
+.card__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+}
+
 .card__price {
   font-size: 18px;
   line-height: 21px;
   color: #444444;
 }
 
+.card__button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 360px;
+  height: 100%;
+  padding-bottom: 82px;
+  background: none;
+}
+
+.card__button span {
+  width: 100%;
+}
+
 .card__new {
+  display: block;
+  position: absolute;
+  top: 27px;
+  right: 27px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 14px;
@@ -944,7 +996,9 @@ html {
 }
 
 .products__more-button {
+  box-sizing: border-box;
   width: 760px;
+  height: 55px;
   justify-self: end;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -952,26 +1006,47 @@ html {
   text-align: center;
   text-transform: uppercase;
   background-color: #ffffff;
+  border: 3px solid #e6e6e6;
+  z-index: 2;
 }
 
 /* Пагинация */
 .pagination {
+  display: flex;
+  align-items: stretch;
+  position: relative;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   align-self: center;
-  justify-self: center;
   width: 760px;
   min-height: 70px;
-  margin-left: 72px;
+  padding-left: 72px;
   background-color: #ffffff;
+}
+
+.pagination::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200vw;
+  height: calc(100% + 72px);
+  width: 100vw;
+  box-shadow: 200vw 0 0 0 #ffffff;
+  z-index: 1;
 }
 
 .pagination__list {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   margin: 0;
   padding: 0;
+  padding-left: 29px;
+  padding-right: 29px;
   list-style-type: none;
   background-color: #ebebeb;
+  z-index: 2;
 }
 
 .pagination__button {
@@ -980,6 +1055,14 @@ html {
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
+}
+
+.pagination__button--prev {
+  margin-right: 220px;
+}
+
+.pagination__button--next {
+  margin-left: 157px;
 }
 
 .pagination__link {
