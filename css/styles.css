@@ -160,6 +160,7 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  column-gap: 20px;
   padding: 0;
   list-style-type: none;
 }
@@ -168,12 +169,8 @@
   text-align: center;
 }
 
-.user-menu__item--login {
+.user-menu__item:first-child {
   margin-right: auto;
-}
-
-.user-menu__item--compare {
-  margin-right: 20px;
 }
 
 .user-menu__link {
