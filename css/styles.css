@@ -40,15 +40,14 @@
 \\\ Общие стили \\\
 \\\\\\\\\\\\\\\\\*/
 
-/* По ТЕГАМ */
-html {
+.page {
   height: 100%;
 }
 
-.body {
+.page__body {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   margin: 0;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -58,7 +57,6 @@ html {
   background-color: #ffffff;
 }
 
-/* По КЛАССАМ */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -107,24 +105,19 @@ html {
   line-height: 50px;
 }
 
-.body__main {
+.page__main {
   flex-grow: 1;
 }
 
 /*\\\\\\\\\\\\\\\\
 \\\\\ Обертки \\\\\
 \\\\\\\\\\\\\\\\\*/
-.body__centerer,
-.catalog__centerer,
-.main__centerer,
-.services__centerer,
-.subscription__centerer,
-.footer__centerer {
+.page__centerer {
   width: 1160px;
   margin: 0 auto;
 }
 
-.main__section--double {
+.main__double {
   display: grid;
   grid-template-columns: 600px 560px;
   margin-bottom: 72px;
@@ -160,13 +153,13 @@ html {
 
 .header__user-menu {
   grid-area: user;
+  margin: 0;
 }
 
 .user-menu {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin: 0;
   padding: 0;
   list-style-type: none;
 }
@@ -266,11 +259,14 @@ html {
 \\\\\\\\\\\\\\\\\*/
 
 /* Популярные товары */
+.main__popular {
+  margin-bottom: 70px;
+}
+
 .popular {
   position: relative;
   width: 1160px;
   height: 560px;
-  margin-bottom: 70px;
   background-image: linear-gradient(#ffe17f 150px, transparent 150px);
   overflow-y: hidden; /* Временное свойство */
 }
@@ -380,15 +376,18 @@ html {
   outline: 1px dashed #444444; /* Временно */
 }
 
+.popular__pagination {
+  margin: 0;
+}
+
 .dot-pagination {
   display: flex;
-  margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 /* Категории */
-.categories {
+.main__categories {
   margin-bottom: 69px;
 }
 
@@ -415,9 +414,12 @@ html {
 }
 
 /* Услуги */
+.main__services {
+  margin-bottom: 90px;
+}
+
 .services {
   height: 319px;
-  margin-bottom: 90px;
   background-image: linear-gradient(transparent 100px, #f0f0f0 100px);
   overflow: hidden;
 }
@@ -478,10 +480,13 @@ html {
 }
 
 /* Доставка */
+.main__delivery {
+  margin-bottom: 97px;
+}
+
 .delivery {
   color: #000000;
   background-color: #f0f0f0;
-  margin-bottom: 97px;
 }
 
 .delivery__button {
