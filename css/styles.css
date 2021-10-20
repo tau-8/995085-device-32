@@ -897,7 +897,8 @@
   display: grid;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  width: 800px;
+  box-sizing: border-box;
+  width: 832px;
 }
 
 .products__list {
@@ -910,6 +911,7 @@
   row-gap: 44px;
   margin: 0;
   padding: 0;
+  margin-bottom: 44px;
   padding-top: 69px;
   padding-left: 72px;
   list-style-type: none;
@@ -921,7 +923,7 @@
   position: absolute;
   top: 0;
   left: -200vw;
-  height: calc(100% + 110px);
+  height: calc(100% + 150px);
   width: 100vw;
   box-shadow: 200vw 0 0 0 #ffffff;
 }
