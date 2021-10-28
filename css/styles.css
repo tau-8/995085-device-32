@@ -868,6 +868,8 @@
 
 /* Сортировка */
 .sorting {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   grid-column: 2 / 3;
@@ -879,7 +881,56 @@
 
 .sorting__title {
   margin: 0;
-  margin-right: 53px;
+  margin-right: 44px;
+}
+
+.selection {
+  position: relative;
+  padding: 3px 34px 4px 9px;
+  user-select: none;
+}
+
+.selection__summary {
+  list-style-type: none;
+}
+
+.selection__summary::after {
+  content: '>';
+  z-index: 1;
+  position: absolute;
+  right: 8px;
+}
+
+.selection[open] .selection__summary::after {
+  content: 'v';
+}
+
+.selection__options {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.selection__option {
+  display: block;
+  width: 100%;
+  padding: 3px 0 4px 9px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #dcdcdc;
+}
+
+.selection__option:last-child {
+  margin-bottom: 0;
+}
+
+.selection__option:hover {
+  background-color: #c7c7c7;
 }
 
 .sorting__order {
