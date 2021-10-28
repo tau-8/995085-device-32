@@ -165,13 +165,25 @@
             <button class="filters__button button" type="submit">Показать</button>
           </form>
 
-          <form class="catalog__sorting sorting"  action="https://echo.htmlacademy.ru/" method="GET">
+          <section class="catalog__sorting sorting"  action="https://echo.htmlacademy.ru/" method="GET">
             <h3 class="catalog__title sorting__title">Сортировка:</h3>
-            <select class="sorting__select select" id="sorting" name="sorting">
-              <option value="select__option select__option--popular">Сначала популярные</option>
-              <option value="select__option select__option--inexpensive">Сначала недорогие</option>
-              <option value="select__option select__option--expensive">Сначала дорогие</option>
-            </select>
+            <details class="sorting__selection selection">
+              <summary class="selection__summary">
+                <span class="visually-hidden">Сортировка. Выбрано:</span>
+                <span class="selection__selected">Сначала популярные</span>
+              </summary>
+              <ol class="selection__options">
+                <li>
+                  <a class="selection__option selection__option--popular" href="##">Сначала популярные</a>
+                </li>
+                <li>
+                  <a class="selection__option selection__option--popular" href="##">Сначала недорогие</a>
+                </li>
+                <li>
+                  <a class="selection__option selection__option--popular" href="##">Сначала дорогие</a>
+                </li>
+              </ol>
+            </details>
             <ul class="sorting__order order">
               <li class="order__item">
                 <button class="order__button order__button--up order__button--current" type="button">
@@ -184,7 +196,7 @@
                 </button>
               </li>
             </ul>
-          </form>
+          </section>
 
           <section class="catalog__products products">
             <h3 class="visually-hidden">Список товаров:</h3>
