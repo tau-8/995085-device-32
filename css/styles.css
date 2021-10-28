@@ -73,10 +73,6 @@
   color: inherit;
 }
 
-.link:hover {
-  text-decoration: underline; /* Временно */
-}
-
 .link--uppercase {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -94,8 +90,10 @@
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
   color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .section-title {
@@ -1000,6 +998,8 @@
   height: 55px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
