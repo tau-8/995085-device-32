@@ -260,6 +260,7 @@
 .user-menu {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   flex-wrap: wrap;
   column-gap: 20px;
   padding: 0;
@@ -278,18 +279,42 @@
   display: block;
   font-size: 16px;
   line-height: 19px;
+  border-radius: 20px;
+}
+
+.user-menu__link:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
+.user-menu__link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.user-menu__link:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
+.user-menu__link:hover {
+  opacity: 0.6;
+}
+
+.user-menu__link:active {
+  opacity: 0.3;
 }
 
 .user-menu__link--login {
-  padding: 10px 21px 9px 45px;
+  padding: 8px 21px 9px 45px;
+  background: no-repeat url("../images/icons/user.svg") left 20px bottom 13px/13px 12px;
 }
 
 .user-menu__link--compare {
-  padding: 10px 19px 9px 39px;
+  padding: 8px 19px 9px 39px;
+  background: no-repeat url("../images/icons/compare.svg") left 20px bottom 13px/10px 12px;
 }
 
 .user-menu__link--cart {
-  padding: 10px 20px 9px 42px;
+  padding: 8px 20px 9px 42px;
+  background: no-repeat url("../images/icons/cart.svg") left 17px bottom 13px/16px 14px;
 }
 
 .header__navigation {
