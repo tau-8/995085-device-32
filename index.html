@@ -26,7 +26,7 @@
           <a class="user-menu__link user-menu__link--compare link" href="#">Сравнить</a>
         </li>
         <li class="user-menu__item">
-          <a class="user-menu__link user-menu__link--cart link" href="#">Корзина</a>
+          <a class="user-menu__link user-menu__link--cart link" href="#" data-amount="2">Корзина</a>
         </li>
       </ul>
 
@@ -34,13 +34,10 @@
         <ul class="site-navigation__list">
           <li class="site-navigation__item site-navigation__item--catalog">
             <a class="site-navigation__link site-navigation__link--catalog link link--uppercase" href="catalog.html">Каталог товаров</a>
-            <button class="site-navigation__button" type="button">
-              <span class="visually-hidden">Развернуть быстрое меню каталога</span>
-            </button>
             <ul class="site-navigation__dropdown catalog-dropdown visually-hidden">
-              <li class="catalog-dropdown__item cameras">
+              <li class="catalog-dropdown__item">
                 <span class="visually-hidden">Виртуальная реальность и товары для съёмки</span>
-                <ul>
+                <ul class="catalog-dropdown__nested">
                   <li>
                     <a class="catalog-dropdown__link link" href="#">Виртуальная реальность</a>
                   </li>
@@ -52,9 +49,9 @@
                   </li>
                 </ul>
               </li>
-              <li class="catalog-dropdown__item watches">
+              <li class="catalog-dropdown__item">
                 <span class="visually-hidden">Наручные гаджеты</span>
-                <ul>
+                <ul class="catalog-dropdown__nested">
                   <li>
                     <a class="catalog-dropdown__link link" href="#">Фитнес-браслеты</a>
                   </li>
@@ -63,19 +60,19 @@
                   </li>
                 </ul>
               </li>
-              <li class="catalog-dropdown__item drones">
+              <li class="catalog-dropdown__item">
                 <a class="catalog-dropdown__link link" href="#">Квадрокоптеры</a>
               </li>
             </ul>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link link link--uppercase" href="#">Доставка</a>
+            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="#">Доставка</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link link link--uppercase" href="#">Гарантия</a>
+            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="#">Гарантия</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link link link--uppercase" href="#">Контакты</a>
+            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
