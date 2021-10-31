@@ -813,51 +813,98 @@
   letter-spacing: -0.02em;
 }
 
-.categories__link::before {
+.categories__link::before,
+.categories__link::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 160px;
   height: 160px;
+}
+
+.categories__link::before {
   background-color: #ffe17f;
+}
+
+.categories__link::after {
   background-repeat: no-repeat;
 }
 
-.categories__link--vr::before {
+.categories__link--vr::after {
   background-image: url("../images/icons/category-virtual-reality.svg");
   background-size: 97px 55px;
   background-position: 32px 53px;
 }
 
-.categories__link--monopods::before {
+.categories__link--monopods::after {
   background-image: url("../images/icons/category-monopods.svg");
   background-size: 86px 117px;
   background-position: bottom;
 }
 
-.categories__link--cameras::before {
+.categories__link--cameras::after {
   background-image: url("../images/icons/category-action-cameras.svg");
   background-size: 71px 87px;
   background-position: 49px 38px;
 }
 
-.categories__link--bracelets::before {
+.categories__link--bracelets::after {
   background-image: url("../images/icons/category-fitness-bracelets.svg");
   background-size: 107px 65px;
   background-position: 26px 50px;
 }
 
-.categories__link--watches::before {
+.categories__link--watches::after {
   background-image: url("../images/icons/category-watches.svg");
   background-size: 56px 98px;
   background-position: 53px 31px;
 }
 
-.categories__link--drones::before {
+.categories__link--drones::after {
   background-image: url("../images/icons/category-drones.svg");
   background-size: 132px 69px;
   background-position: 14px 49px;
+}
+
+.categories__link:hover::before {
+  background-color: #ffc700;
+}
+
+.categories__link:focus {
+  outline: none;
+}
+
+.categories__link:focus span {
+  color: #af4fff;
+}
+
+.categories__link:not(:focus-visible) span {
+  color: inherit;
+}
+
+.categories__link:focus-visible span {
+  color: #af4fff;
+}
+
+.categories__link:focus::before {
+  outline: 5px solid #af4fff;
+}
+
+.categories__link:not(:focus-visible)::before {
+  outline: none;
+}
+
+.categories__link:focus-visible::before {
+  outline: 5px solid #af4fff;
+}
+
+.categories__link:active::after {
+  opacity: 0.3;
+}
+
+.categories__link:active span {
+  opacity: 0.3;
 }
 
 /* Услуги */
