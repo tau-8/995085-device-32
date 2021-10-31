@@ -1043,16 +1043,71 @@
 }
 
 .delivery__button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
+  padding-left: 5px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  background-image: linear-gradient(to right, #ffe17f 125px, #f0f0f0 125px);
+}
+
+.delivery__button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 125px;
+  height: 100px;
+  background: no-repeat url("../images/icons/delivery.svg") 39px 35px / 47px 31px;
+}
+
+.delivery__button::after {
+  content: "";
+  position: absolute;
+  right: 33px;
+  width: 40px;
+  height: 40px;
+  background: no-repeat url("../images/icons/info.svg") center / 2px 12px;
+  background-color: #dcdcdc;
+  border-radius: 20px;
+  opacity: 0.5;
+}
+
+.delivery__button:focus {
+  outline: 5px solid #af4fff;
+  outline-offset: -1px;
+}
+
+.delivery__button:not(:focus-visible) {
+  outline: none;
+}
+
+.delivery__button:focus-visible {
+  outline: 5px solid #af4fff;
+  outline-offset: -1px;
+}
+
+.delivery__button:hover {
+  background-image: linear-gradient(to right, #ffc700 125px, #f0f0f0 125px);
+}
+
+.delivery__button:hover::after {
+  opacity: 1;
+}
+
+.delivery__button:active::before,
+.delivery__button:active span {
+  opacity: 0.3;
+}
+
+.delivery__button:active::after {
+  opacity: 0.5;
 }
 
 /* О нас */
