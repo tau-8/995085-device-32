@@ -82,6 +82,35 @@
   text-transform: uppercase;
 }
 
+.link--phone {
+  display: block;
+  width: fit-content;
+  padding-right: 15px;
+  padding-left: 15px;
+  transform: translateX(-15px);
+  border-radius: 16px;
+}
+
+.link--phone:hover {
+  color: #ffc700;
+}
+
+.link--phone:active {
+  opacity: 0.3;
+}
+
+.link--phone:focus {
+  outline: 2px solid #af4fff;
+}
+
+.link--phone:not(:focus-visible) {
+  outline: none;
+}
+
+.link--phone:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
 .button {
   --button-after-color: #ffe17f;
   z-index: 1;
@@ -1112,13 +1141,14 @@
 
 /* О нас */
 .about {
-  padding-top: 49px;
+  position: relative;
+  padding-top: 50px;
   padding-right: 138px;
 }
 
 .about__title {
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 45px;
 }
 
 .about__info {
@@ -1134,15 +1164,17 @@
 .about__companies-list {
   margin: 0;
   padding: 0;
-  margin-left: 35px;
-  margin-bottom: 57px;
+  margin-bottom: 68px;
+  list-style-type: none;
 }
 
 .about__companies-item {
   margin-bottom: 20px;
+  padding-left: 35px;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  background: no-repeat url("../images/icons/list-bullet.svg") 1px center / 8px 8px;
 }
 
 .about__companies-item:last-child {
@@ -1154,19 +1186,19 @@
 }
 
 .about__button {
-  min-height: 50px;
-  outline: 1px dashed #444444; /* Временно */
+  padding: 14px 17px 15px 18px;
 }
 
 /* Контакты */
 .contacts {
-  padding-top: 49px;
+  position: relative;
+  padding-top: 50px;
   padding-right: 45px;
 }
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 45px;
 }
 
 .contacts__info {
@@ -1200,13 +1232,65 @@
 
 .contacts__schedule {
   margin: 0;
-  margin-bottom: 52px;
+  padding: 0;
+  margin-bottom: 63px;
   color: #444444;
+  list-style-type: none;
 }
 
 .contacts__button {
-  min-height: 50px;
-  outline: 1px dashed #444444; /* Временно */
+  padding: 14px 33px 15px 34px;
+}
+
+/* Состояния кнопок "О нас" и "Контакты" */
+.about__button:hover::after,
+.contacts__button:hover::after {
+  height: 100%;
+  background-color: var(--button-after-color);
+}
+
+.about__button:active,
+.contacts__button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.about__button:focus,
+.contacts__button:focus {
+  outline: none;
+}
+
+.about__button:focus::after,
+.contacts__button:focus::after {
+  background-color: #af4fff;
+}
+
+.about__button:focus:not(:focus-visible)::after,
+.contacts__button:focus:not(:focus-visible)::after {
+  background-color: var(--button-after-color);
+}
+
+.about__button:focus-visible,
+.contacts__button:focus-visible {
+  outline: none;
+}
+
+.about__button:focus-visible::after,
+.contacts__button:focus-visible::after {
+  background-color: #af4fff;
+}
+
+
+/* Декоративная линия над "О нас" и "Контакты" */
+
+.about::before,
+.contacts::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: #000000;
+  top: 0;
+  left: 0;
 }
 
 /* Форма рассылки */
