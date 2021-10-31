@@ -789,7 +789,7 @@
 
 /* Категории */
 .main__categories {
-  margin-bottom: 69px;
+  margin-bottom: 81px;
 }
 
 .categories__list {
@@ -801,17 +801,63 @@
 }
 
 .categories__link {
+  position: relative;
   display: block;
   box-sizing: border-box;
   width: 160px;
   padding-top: 193px;
-  padding-bottom: 12px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
   letter-spacing: -0.02em;
-  outline: 1px dashed #444444; /* Временно */
+}
+
+.categories__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-color: #ffe17f;
+  background-repeat: no-repeat;
+}
+
+.categories__link--vr::before {
+  background-image: url("../images/icons/category-virtual-reality.svg");
+  background-size: 97px 55px;
+  background-position: 32px 53px;
+}
+
+.categories__link--monopods::before {
+  background-image: url("../images/icons/category-monopods.svg");
+  background-size: 86px 117px;
+  background-position: bottom;
+}
+
+.categories__link--cameras::before {
+  background-image: url("../images/icons/category-action-cameras.svg");
+  background-size: 71px 87px;
+  background-position: 49px 38px;
+}
+
+.categories__link--bracelets::before {
+  background-image: url("../images/icons/category-fitness-bracelets.svg");
+  background-size: 107px 65px;
+  background-position: 26px 50px;
+}
+
+.categories__link--watches::before {
+  background-image: url("../images/icons/category-watches.svg");
+  background-size: 56px 98px;
+  background-position: 53px 31px;
+}
+
+.categories__link--drones::before {
+  background-image: url("../images/icons/category-drones.svg");
+  background-size: 132px 69px;
+  background-position: 14px 49px;
 }
 
 /* Услуги */
