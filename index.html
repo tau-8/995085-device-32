@@ -83,11 +83,39 @@
 
       <section class="main__popular page__centerer popular">
         <h2 class="visually-hidden">Популярные товары</h2>
+
+        <div class="popular__buttons slider-controls">
+          <button class="slider-controls__button slider-controls__button--previous" type="button">
+            <span class="visually-hidden">Предыдущий товар</span>
+          </button>
+          <button class="slider-controls__button slider-controls__button--next" type="button">
+            <span class="visually-hidden">Следующий товар</span>
+          </button>
+        </div>
+
+        <ol class="popular__pagination dot-pagination">
+          <li class="dot-pagination__item">
+            <button class="dot-pagination__button dot-pagination__button--current" type="button">
+              <span class="visually-hidden">1-й товар</span>
+            </button>
+          </li>
+          <li class="dot-pagination__item">
+            <button class="dot-pagination__button" type="button">
+              <span class="visually-hidden">2-й товар</span>
+            </button>
+          </li>
+          <li class="dot-pagination__item">
+            <button class="dot-pagination__button" type="button">
+              <span class="visually-hidden">3-й товар</span>
+            </button>
+          </li>
+        </ol>
+
         <ol class="popular__list">
-          <li class="popular__item product">
+          <li class="popular__item product" data-popular-counter="01">
             <img class="product__image" src="images/popular-01.png" width="560" height="560" alt="Дрон-поджигатель">
             <b class="product__slogan">Порхает как бабочка, <br>жалит как пчела!</b>
-            <p class="product__info">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <p class="product__info">Этот обычный, на первый взгляд, квадрокоптер оснащён мощным лазером, замаскированным под стандартную камеру.</p>
             <a class="product__button button link" href="#">Подробнее</a>
             <table class="product__specs">
               <tr>
@@ -109,7 +137,7 @@
             </table>
           </li>
 
-          <li class="popular__item product">
+          <li class="popular__item product" data-popular-counter="02">
             <img class="product__image" src="images/popular-02.png" width="560" height="560" alt="Осуждающий фитнес-браслет">
             <b class="product__slogan">Худеем <br>правильно!</b>
             <p class="product__info">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
@@ -126,7 +154,7 @@
             </table>
           </li>
 
-          <li class="popular__item product">
+          <li class="popular__item product" data-popular-counter="03">
             <img class="product__image" src="images/popular-03.png" width="560" height="560" alt="Восьмиметровая селфи-палка">
             <b class="product__slogan">Делай селфи, <br>как Бен Стиллер!</b>
             <p class="product__info">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
@@ -157,33 +185,6 @@
                 </td>
               </tr>
             </table>
-          </li>
-        </ol>
-
-        <div class="popular__buttons slider-controls">
-          <button class="popular__button-previous slider-controls__button slider-controls__button--left" type="button">
-            <span class="visually-hidden">Предыдущий товар</span>
-          </button>
-          <button class="popular__button-next slider-controls__button slider-controls__button--right" type="button">
-            <span class="visually-hidden">Следующий товар</span>
-          </button>
-        </div>
-
-        <ol class="popular__pagination dot-pagination">
-          <li class="dot-pagination__item">
-            <button class="dot-pagination__button dot-pagination__button--current" type="button">
-              <span class="visually-hidden">1-й товар</span>
-            </button>
-          </li>
-          <li class="dot-pagination__item">
-            <button class="dot-pagination__button" type="button">
-              <span class="visually-hidden">2-й товар</span>
-            </button>
-          </li>
-          <li class="dot-pagination__item">
-            <button class="dot-pagination__button" type="button">
-              <span class="visually-hidden">3-й товар</span>
-            </button>
           </li>
         </ol>
       </section>
