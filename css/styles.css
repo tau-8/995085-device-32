@@ -163,7 +163,7 @@
 .main__double {
   display: grid;
   grid-template-columns: 600px 560px;
-  margin-bottom: 72px;
+  margin-bottom: 81px;
 }
 
 /*\\\\\\\\\\\\\\\\
@@ -223,9 +223,10 @@
   margin: 0;
   padding: 10px 170px 10px 0;
   padding-left: 52px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  letter-spacing: 0.03em;
   background-color: transparent;
   border: 2px solid transparent;
   border-radius: 20px;
@@ -1295,8 +1296,8 @@
 
 /* Форма рассылки */
 .subscription {
-  padding-top: 75px;
-  padding-bottom: 135px;
+  padding-top: 76px;
+  padding-bottom: 130px;
   background-color: #f0f0f0;
 }
 
@@ -1318,7 +1319,8 @@
 .subscription__info {
   grid-area: info;
   margin: 0;
-  padding-top: 11px;
+  padding-top: 10px;
+  padding-right: 32px;
   padding-bottom: 59px;
   color: #444444;
 }
@@ -1335,13 +1337,39 @@
 .email-form__field {
   box-sizing: border-box;
   width: 100%;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
   background-color: transparent;
   border: none;
   border-bottom: 3px solid #d8d8d8;
 }
 
+.email-form__field::placeholder {
+  opacity: 0.5;
+}
+
+.email-form__field:not(:placeholder-shown) {
+  border-color: #000000;
+}
+
+.email-form__field:hover::placeholder {
+  opacity: 0.7;
+}
+
+.email-form__field:focus {
+  background-color: #dcdcdc;
+  outline: none;
+}
+
+.email-form__field:focus:invalid {
+  border-color: #ff3d3d;
+}
+
 .email-form__button {
-  min-height: 50px;
+  padding: 13px 36px 15px 39px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1351,13 +1379,41 @@
   text-transform: uppercase;
   background-color: #f0f0f0;
   border: 3px solid #d8d8d8;
+  cursor: pointer;
+}
+
+.email-form__button:hover {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.email-form__button:active {
+  color: #4c4c4c;
+}
+
+.email-form__button:focus {
+  border-color: #af4fff;
+  outline: none;
+}
+
+.email-form__button:focus:not(:focus-visible) {
+  border-color: #000000;
+  outline: none;
+}
+
+.email-form__button:focus-visible {
+  border-color: #af4fff;
+  outline: none;
 }
 
 .subscription__misc-info {
   grid-area: misc;
   justify-self: end;
   align-self: center;
+  padding-left: 36px;
   color: #444444;
+  background: no-repeat url("../images/icons/tick-big.svg") 0 7px / 14px 14px;
 }
 
 /*\\\\\\\\\\\\\\\\
