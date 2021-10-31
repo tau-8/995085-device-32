@@ -84,6 +84,7 @@
 
 .button {
   --button-after-color: #ffe17f;
+  z-index: 1;
   position: relative;
   height: fit-content;
   font-family: "Raleway", sans-serif;
@@ -100,7 +101,7 @@
 }
 
 .button::after {
-  z-index: -1;
+  z-index: -2;
   content: "";
   position: absolute;
   top: 50%;
@@ -915,6 +916,7 @@
 .services {
   overflow: hidden;
   height: 319px;
+  padding-bottom: 69px;
   background-image: linear-gradient(transparent 100px, #f0f0f0 100px);
 }
 
@@ -928,23 +930,62 @@
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: 24px;
+  align-items: flex-start;
+  row-gap: 25px;
+  height: fit-content;
   margin: 0;
   padding: 0;
   padding-top: 80px;
-  padding-bottom: 70px;
+  padding-bottom: 69px;
   border-right: 7px solid #000000;
   list-style-type: none;
 }
 
 .services__toggle-button {
-  width: 100%;
-  padding: 9px 0 11px 18px;
-  text-align: left;
-  color: #ffe17f;
-  background-color: #000000;
+  min-width: 164px;
+  padding: 9px 0 10px 0;
   border: none;
+}
+
+.services__toggle-button::after {
+  width: 160px;
+  background-color: #ffc700;
+}
+
+.services__toggle-button:hover::after {
+  height: 100%;
+  background-color: #ffc700;
+}
+
+.services__toggle-button:focus {
+  outline: none;
+}
+
+.services__toggle-button:focus::after {
+  background-color: #af4fff;
+}
+
+.services__toggle-button:not(:focus-visible)::after {
+  background-color: #ffc700;
+}
+
+.services__toggle-button:focus-visible::after {
+  background-color: #af4fff;
+}
+
+.services__toggle-button--current {
+  color: #ffe17f;
+}
+
+.services__toggle-button--current::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -117px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
 }
 
 .services__list {
@@ -957,9 +998,28 @@
 
 .services__item {
   display: grid;
-  grid-template-rows: 120px 165px;
-  row-gap: 34px;
-  padding-right: 308px;
+  grid-template-rows: 121px 185px;
+  row-gap: 33px;
+  padding-right: 275px;
+  background-repeat: no-repeat;
+}
+
+.services__item--delivery {
+  background-image: url("../images/icons/service-delivery.svg");
+  background-position: 558px 85px;
+  background-size: 136px 164px;
+}
+
+.services__item--warranty {
+  background-image: url("../images/icons/service-warranty.svg");
+  background-position: 543px 61px;
+  background-size: 171px 195px;
+}
+
+.services__item--loan {
+  background-image: url("../images/icons/service-loan.svg");
+  background-position: 534px 61px;
+  background-size: 156px 188px;
 }
 
 .services__title {
