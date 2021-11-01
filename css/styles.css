@@ -85,9 +85,8 @@
 .link--phone {
   display: block;
   width: fit-content;
-  padding-right: 15px;
-  padding-left: 15px;
-  transform: translateX(-15px);
+  padding-right: 12px;
+  padding-left: 12px;
   border-radius: 16px;
 }
 
@@ -1187,7 +1186,7 @@
 }
 
 .about__button {
-  padding: 14px 17px 15px 18px;
+  padding: 14px 14px 15px 19px;
 }
 
 /* Контакты */
@@ -1229,6 +1228,7 @@
 
 .contacts__phone {
   text-decoration: underline;
+  transform: translateX(-12px);
 }
 
 .contacts__schedule {
@@ -1240,7 +1240,7 @@
 }
 
 .contacts__button {
-  padding: 14px 33px 15px 34px;
+  padding: 14px 30px 15px 35px;
 }
 
 /* Состояния кнопок "О нас" и "Контакты" */
@@ -1883,14 +1883,14 @@
 
 .footer__container {
   position: relative;
-  padding-top: 133px;
+  padding-top: 125px;
   padding-bottom: 61px;
 }
 
 .footer__grid {
   display: grid;
   grid-template-columns: 300px 560px 300px;
-  grid-template-rows: minmax(38px, auto) minmax(40px, auto);
+  grid-template-rows: minmax(46px, auto) minmax(40px, auto);
   grid-template-areas:
     "contacts services ."
     ". social devs";
@@ -1901,6 +1901,7 @@
 .footer__index-link {
   position: absolute;
   top: 62px;
+  left: -2px;
 }
 
 /* Адрес и телефон */
@@ -1910,6 +1911,7 @@
 
 .footer__contacts-address {
   padding-right: 25px;
+  padding-top: 8px;
   font-size: 16px;
   line-height: 19px;
   font-style: normal;
@@ -1921,28 +1923,34 @@
 
 .footer__contacts-phone {
   position: absolute;
-  right: 0;
-  top: calc(133px + (1em / 2));
+  right: -12px;
+  top: 138px;
 }
 
 /* Наши предложения */
 .footer__services {
   grid-area: services;
+  align-self: start;
+  padding-top: 3px;
 }
 
 .services-mini__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 32px;
   row-gap: 5px;
   margin: 0;
   padding: 0;
-  padding-top: 4px;
+  padding-left: 6px;
   list-style-type: none;
 }
 
 .services-mini__link {
+  position: relative;
+  display: block;
+  padding: 9px 14px 10px 14px;
+  text-align: center;
+  border-radius: 25px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1951,10 +1959,57 @@
   text-transform: uppercase;
 }
 
+.services-mini__link::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  bottom: 3px;
+  left: 14px;
+  display: none;
+  border-bottom: 2px solid #ffc700;
+}
+
+.services-mini__link:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 3px;
+}
+
+.services-mini__link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.services-mini__link:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 3px;
+}
+
+.services-mini__link:hover {
+  color: #ffc700;
+}
+
+.services-mini__link:hover::after {
+  display: block;
+}
+
+.services-mini__link:active {
+  opacity: 0.3;
+}
+
 /* Соцсети */
 .footer__social {
+  position: relative;
   grid-area: social;
-  justify-self: center;
+  justify-self: stretch;
+}
+
+.footer__social::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: -300px;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc700;
 }
 
 .social-media__list {
@@ -1969,16 +2024,111 @@
 }
 
 .social-media__button {
+  position: relative;
   display: block;
   width: 40px;
   height: 40px;
+  border-radius: 20px;
+  background-color: #7c7c7c;
+  outline-offset: -1px;
+}
 
-  outline: 1px dashed #ffe17f; /* Временно */
-  outline-offset: -1px; /* Временно */
+.social-media__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #444444;
+  opacity: 1;
+}
+
+.social-media__button:focus {
+  outline: 5px solid #af4fff;
+  background-color: transparent;
+}
+
+.social-media__button:focus .social-media__icon {
+  fill: #ffffff;
+}
+
+.social-media__button:not(:focus-visible) {
+  outline: none;
+  background-color: #7c7c7c;
+}
+
+.social-media__button:not(:focus-visible) .social-media__icon {
+  fill: #444444;
+}
+
+.social-media__button:focus-visible {
+  outline: 5px solid #af4fff;
+  background-color: transparent;
+}
+
+.social-media__button:focus-visible .social-media__icon {
+  fill: #ffffff;
+}
+
+.social-media__button:hover {
+  background-color: #ffc700;
+}
+
+.social-media__button:active .social-media__icon {
+  opacity: 0.3;
 }
 
 /* Разработчики */
 .footer__devs-link {
   grid-area: devs;
   justify-self: end;
+  align-self: start;
+  margin-top: 3px;
+}
+
+.developers-link {
+  position: relative;
+}
+
+.developers-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  outline-offset: 10px;
+}
+
+.developers-link:focus {
+  outline: none;
+}
+
+.developers-link:focus::after {
+  outline: 2px solid #af4fff;
+}
+
+.developers-link:not(:focus-visible)::after {
+  outline: none;
+}
+
+.developers-link:focus-visible::after {
+  outline: 2px solid #af4fff;
+}
+
+.developers-link__logo {
+  display: block;
+  width: 115px;
+  height: 33px;
+  fill: #ffc700;
+}
+
+.developers-link:hover .developers-link__logo {
+  fill: #ffffff;
+}
+
+.developers-link:active .developers-link__logo {
+  opacity: 0.3;
 }
