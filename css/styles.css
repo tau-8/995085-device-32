@@ -398,8 +398,7 @@
 }
 
 .site-navigation__item:nth-child(3) {
-  position: relative;
-  left: -21px;
+  transform: translateX(-21px);
 }
 
 .site-navigation__item:nth-child(4) {
