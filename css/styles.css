@@ -1517,14 +1517,54 @@
 
 .breadcrumbs {
   display: flex;
+  margin-left: -6px;
 }
 
 .breadcrumbs__item {
-  margin-right: 35px;
+  position: relative;
+  margin-right: 23px;
 }
 
 .breadcrumbs__link {
+  display: block;
+  padding-left: 6px;
+  padding-right: 6px;
+  outline-offset: 5px;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  top: 6px;
+  width: 4px;
+  height: 7px;
+  background: no-repeat url("../images/icons/nav-arrow.svg") center / 4px 7px;
+  opacity: 0.2;
+}
+
+.breadcrumbs__link span {
   opacity: 0.6;
+}
+
+.breadcrumbs__link:hover span {
+  opacity: 1;
+}
+
+.breadcrumbs__link:active span {
+  opacity: 0.3;
+}
+
+.breadcrumbs__link:focus {
+  outline: 5px solid #af4fff;
+}
+
+.breadcrumbs__link:focus:not(:focus-visible) {
+  outline: outline;
+}
+
+.breadcrumbs__link:focus-visible {
+  outline: 5px solid #af4fff;
 }
 
 /* Каталог */
