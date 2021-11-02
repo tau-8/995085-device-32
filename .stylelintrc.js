@@ -8,7 +8,6 @@ module.exports = {
 
     'declaration-block-no-shorthand-property-overrides': true,
     'font-family-no-duplicate-names': true,
-    'function-calc-no-invalid': true,
     'function-calc-no-unspaced-operator': true,
     'function-linear-gradient-no-nonstandard-direction': true,
     'media-feature-name-no-unknown': true,
