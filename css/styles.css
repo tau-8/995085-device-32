@@ -1055,6 +1055,18 @@
   color: #ffe17f;
 }
 
+.services__toggle-button--current:focus {
+  color: #af4fff;
+}
+
+.services__toggle-button--current:focus:not(:focus-visible) {
+  color: #ffe17f;
+}
+
+.services__toggle-button--current:focus-visible {
+  color: #af4fff;
+}
+
 .services__toggle-button--current::before {
   z-index: -1;
   content: "";
