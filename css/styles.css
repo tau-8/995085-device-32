@@ -68,6 +68,44 @@
   clip: rect(0 0 0 0);
 }
 
+.logo-link {
+  display: block;
+  position: relative;
+}
+
+.logo-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  outline-offset: 10px;
+}
+
+.logo-link:focus {
+  outline: none;
+}
+
+.logo-link:focus::after {
+  outline: 2px solid #af4fff;
+}
+
+.logo-link:focus:not(:focus-visible)::after {
+  outline: none;
+}
+
+.logo-link:focus-visible::after {
+  outline: 2px solid #af4fff;
+}
+
+.logo-link__image {
+  display: block;
+  width: 145px;
+  height: 36px;
+}
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -184,7 +222,7 @@
   background-image: linear-gradient(transparent 40px, #ffe17f 40px);
 }
 
-.header__index-link {
+.header__logo {
   position: absolute;
   left: 61px;
   top: 17px;
@@ -1897,7 +1935,7 @@
 }
 
 /* Логотип-ссылка */
-.footer__index-link {
+.footer__logo {
   position: absolute;
   top: 62px;
   left: -2px;
