@@ -1425,7 +1425,7 @@
   outline: none;
 }
 
-.email-form__field:focus:invalid {
+.email-form__field--error {
   border-color: #ff3d3d;
 }
 
