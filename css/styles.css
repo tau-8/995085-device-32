@@ -2315,7 +2315,7 @@
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   width: 760px;
-  min-height: 70px;
+  height: 70px;
   padding-left: 72px;
   background-color: #ffffff;
 }
@@ -2334,37 +2334,93 @@
 .pagination__list {
   z-index: 2;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-left: 29px;
-  padding-right: 29px;
   background-color: #ebebeb;
   list-style-type: none;
 }
 
+.pagination__item {
+  display: flex;
+  align-items: center;
+}
+
 .pagination__button {
+  box-sizing: border-box;
+  padding: 26px 26px 25px 29px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
+  outline: none;
+  outline-offset: -5px;
 }
 
 .pagination__button--prev {
-  margin-right: 220px;
+  margin-right: 173px;
 }
 
 .pagination__button--next {
-  margin-left: 157px;
+  margin-left: 114px;
+}
+
+.pagination__button--disabled {
+  pointer-events: none;
+}
+
+.pagination__button:hover {
+  background-color: #dcdcdc;
+}
+
+.pagination__button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination__button:focus {
+  outline: 5px solid #af4fff;
+}
+
+.pagination__button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.pagination__button:focus-visible {
+  outline: 5px solid #af4fff;
 }
 
 .pagination__link {
-  color: #444444;
-  opacity: 0.3;
+  display: block;
+  padding: 3px 9px 4px 10px;
+  margin-top: 5px;
+  color: rgba(68, 68, 68, 0.3);
+  outline: none;
+  outline-offset: 1px;
 }
+
+.pagination__link:hover {
+  color: #444444;
+}
+
+.pagination__link:active {
+  color: rgba(68, 68, 68, 0.1);
+}
+
+.pagination__link:focus {
+  outline: 5px solid #af4fff;
+}
+
+.pagination__link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.pagination__link:focus-visible {
+  outline: 5px solid #af4fff;
+}
+
 /*\\\\\\\\\\\\\\\\
 \\\ Футер сайта \\\
 \\\\\\\\\\\\\\\\\*/
