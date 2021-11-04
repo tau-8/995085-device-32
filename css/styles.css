@@ -1712,7 +1712,7 @@
   height: 18px;
   background-color: #ebebeb;
   border: 2px solid #000000;
-  border-radius: 6px;
+  border-radius: 10px;
   appearance: none;
   pointer-events: auto;
   cursor: grab;
@@ -1809,6 +1809,10 @@
 вычисляет ширину поля исходя из текущего количества символов в нём */
 .range-slider__number[data-num-length="4"] {
   width: calc(4ch + 3ch);
+}
+
+.range-slider__number:not(:hover) {
+  appearance: textfield;
 }
 
 .filters__input-list {
