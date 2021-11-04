@@ -1987,9 +1987,12 @@
   padding: 9px 35px 9px 40px;
 }
 
+.filters__button::after {
+  background-color: #ffc700;
+}
+
 .filters__button:hover::after {
   height: 100%;
-  background-color: var(--button-after-color);
 }
 
 .filters__button:active {
@@ -2005,7 +2008,7 @@
 }
 
 .filters__button:focus:not(:focus-visible)::after {
-  background-color: var(--button-after-color);
+  background-color: #ffc700;
 }
 
 .filters__button:focus-visible {
