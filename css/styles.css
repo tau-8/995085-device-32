@@ -152,7 +152,6 @@
   --button-after-color: #ffe17f;
   z-index: 1;
   position: relative;
-  height: fit-content;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -818,6 +817,7 @@
 .product__button {
   grid-area: button;
   padding: 14px 36px 15px 39px;
+  align-self: start;
 }
 
 .product__button:hover::after {
