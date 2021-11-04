@@ -1714,6 +1714,18 @@
   cursor: grab;
 }
 
+.range-slider__range:active::-webkit-slider-thumb {
+  background-color: #000000;
+}
+
+.range-slider__range:focus {
+  outline: none;
+}
+
+.range-slider__range:focus:not(:active)::-webkit-slider-thumb {
+  border-color: #af4fff;
+}
+
 .range-slider__label {
   position: relative;
   display: flex;
@@ -1722,7 +1734,8 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
-  color: #a5a5a5;
+  color: #000000;
+  opacity: 0.3;
   pointer-events: auto;
 }
 
@@ -1732,6 +1745,14 @@
 
 .range-slider__range[value="5000"] + .range-slider__label {
   left: 90px;
+}
+
+.range-slider__range:active + .range-slider__label {
+  opacity: 1;
+}
+
+.range-slider__range:focus:not(:active) + .range-slider__label {
+  color: #af4fff;
 }
 
 .range-slider__number {
@@ -1751,6 +1772,14 @@
 вычисляет ширину поля исходя из текущего количества символов в нём */
 .range-slider__number[data-num-length="4"] {
   width: calc(4ch + 3ch);
+}
+
+.range-slider__number:focus {
+  outline: none;
+}
+
+.range-slider__number:focus::-webkit-slider-thumb {
+  border-color: #af4fff;
 }
 
 .filters__input-list {
