@@ -1015,16 +1015,15 @@
 .services__grid {
   display: grid;
   grid-template-columns: 284px 760px;
+  align-items: start;
   column-gap: 116px;
 }
 
 .services__toggle-list {
-  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   row-gap: 25px;
-  height: fit-content;
   margin: 0;
   padding: 0;
   padding-top: 80px;
