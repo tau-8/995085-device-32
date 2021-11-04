@@ -1577,7 +1577,7 @@
 .catalog__grid {
   display: grid;
   grid-template-columns: 328px 832px;
-  padding-bottom: 72px;
+  padding-bottom: 77px;
 }
 
 .catalog__title {
@@ -2155,9 +2155,13 @@
 }
 
 .products__card {
-  position: relative;
   width: 360px;
   min-height: 462px;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
 }
 
 .card__image {
@@ -2182,12 +2186,36 @@
 }
 
 .card__price {
+  margin-right: 1px;
   font-size: 18px;
   line-height: 21px;
   color: #444444;
 }
 
+.card__overlay {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 360px;
+  height: 380px;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+.card:hover .card__overlay {
+  opacity: 1;
+}
+
+.card:focus-within .card__image {
+  outline: 5px solid #af4fff;
+}
+
+.card:focus-within .card__text,
+.card:focus-within .card__price {
+  color: #af4fff;
+}
+
 .card__button {
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -2196,12 +2224,24 @@
   box-sizing: border-box;
   width: 360px;
   height: 100%;
-  padding-bottom: 82px;
   background: none;
+}
+
+.card__button::after {
+  top: 191px;
+  width: 180px;
+  height: 8px;
+  margin: auto;
+  background-color: #ffc700;
 }
 
 .card__button span {
   width: 100%;
+  margin-left: 4px;
+}
+
+.card__button:focus {
+  outline: none;
 }
 
 .card__new {
@@ -2209,14 +2249,20 @@
   top: 27px;
   right: 27px;
   display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding-left: 3px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 58px;
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
 }
 
 .products__more-button {
@@ -2225,6 +2271,7 @@
   box-sizing: border-box;
   width: 760px;
   height: 55px;
+  padding-left: 10px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -2234,7 +2281,31 @@
   text-transform: uppercase;
   background-color: #ffffff;
   border: 3px solid #e6e6e6;
+  cursor: pointer;
+  outline: none;
+  outline-offset: -5px;
 }
+
+.products__more-button:hover {
+  border: 3px solid #000000;
+}
+
+.products__more-button:active {
+  opacity: 0.3;
+}
+
+.products__more-button:focus {
+  outline: 5px solid #af4fff;
+}
+
+.products__more-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.products__more-button:focus-visible {
+  outline: 5px solid #af4fff;
+}
+
 /* Пагинация */
 .pagination {
   position: relative;
@@ -2255,7 +2326,7 @@
   position: absolute;
   top: 0;
   left: -200vw;
-  height: calc(100% + 72px);
+  height: calc(100% + 77px);
   width: 100vw;
   box-shadow: 200vw 0 0 0 #ffffff;
 }
