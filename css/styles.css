@@ -1804,12 +1804,27 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
   box-sizing: border-box;
   width: 20px;
   height: 20px;
   border: 2px solid #000000;
   border-radius: 3px;
+}
+
+.filters__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  background: no-repeat url("../images/icons/tick.svg") center / 10px 10px;
+}
+
+.filters__checkbox:checked + .filters__label--checkbox::after {
+  display: block;
 }
 
 .filters__label--radio::before {
@@ -1823,6 +1838,23 @@
   height: 20px;
   border: 2px solid #000000;
   border-radius: 20px;
+}
+
+.filters__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: none;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.filters__radio:checked + .filters__label--radio::after {
+  display: block;
 }
 
 .filters__button {
