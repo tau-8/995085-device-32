@@ -1861,7 +1861,7 @@
 }
 
 .filters__checkbox:not(:checked):not(:focus-visible):hover + .filters__label--checkbox {
-  color: #000000;
+  color: #bcbcbc;
 }
 
 .filters__checkbox:not(:checked):focus-visible:hover + .filters__label--checkbox {
