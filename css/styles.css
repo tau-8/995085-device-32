@@ -1560,7 +1560,7 @@
 }
 
 .breadcrumbs__link:focus:not(:focus-visible) {
-  outline: outline;
+  outline: none;
 }
 
 .breadcrumbs__link:focus-visible {
@@ -1721,8 +1721,28 @@
 .range-slider__range:focus {
   outline: none;
 }
-
+/* Фокус на ползунке -webkit (x3) */
 .range-slider__range:focus:not(:active)::-webkit-slider-thumb {
+  border-color: #af4fff;
+}
+
+.range-slider__range:not(:focus-visible):not(:active)::-webkit-slider-thumb {
+  border-color: #000000;
+}
+
+.range-slider__range:focus-visible:not(:active)::-webkit-slider-thumb {
+  border-color: #af4fff;
+}
+/* Фокус на ползунке -moz (x3) */
+.range-slider__range:focus:not(:active)::-moz-range-thumb {
+  border-color: #af4fff;
+}
+
+.range-slider__range:not(:focus-visible):not(:active)::-moz-range-thumb {
+  border-color: #000000;
+}
+
+.range-slider__range:focus-visible:not(:active)::-moz-range-thumb {
   border-color: #af4fff;
 }
 
@@ -1749,12 +1769,16 @@
 .range-slider__range:active + .range-slider__label {
   opacity: 1;
 }
-
-.range-slider__range:focus:not(:active) {
+/* Фокус ползунке перекрашивает текст (x3) */
+.range-slider__range:focus:not(:active) + .range-slider__label {
   color: #af4fff;
 }
 
-.range-slider__range:focus:not(:active) + .range-slider__label {
+.range-slider__range:not(:focus-visible):not(:active) + .range-slider__label {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.range-slider__range:focus-visible:not(:active) + .range-slider__label {
   color: #af4fff;
 }
 
@@ -1833,7 +1857,15 @@
 }
 
 .filters__checkbox:not(:checked):focus:hover + .filters__label--checkbox {
-  color: #ce9df5;
+  color: #af4fff;
+}
+
+.filters__checkbox:not(:checked):not(:focus-visible):hover + .filters__label--checkbox {
+  color: #000000;
+}
+
+.filters__checkbox:not(:checked):focus-visible:hover + .filters__label--checkbox {
+  color: #af4fff;
 }
 
 .filters__checkbox:checked + .filters__label--checkbox::after {
@@ -1844,11 +1876,35 @@
   color: #af4fff;
 }
 
+.filters__checkbox:not(:focus-visible) + .filters__label--checkbox {
+  color: #000000;
+}
+
+.filters__checkbox:focus-visible + .filters__label--checkbox {
+  color: #af4fff;
+}
+
 .filters__checkbox:focus + .filters__label--checkbox::before {
   border-color: #af4fff;
 }
 
+.filters__checkbox:not(:focus-visible) + .filters__label--checkbox::before {
+  border-color: #000000;
+}
+
+.filters__checkbox:focus-visible + .filters__label--checkbox::before {
+  border-color: #af4fff;
+}
+
 .filters__checkbox:focus + .filters__label--checkbox::after {
+  background-image: url("../images/icons/tick-focus.svg");
+}
+
+.filters__checkbox:not(:focus-visible) + .filters__label--checkbox::after {
+  background-image: url("../images/icons/tick.svg");
+}
+
+.filters__checkbox:focus-visible + .filters__label--checkbox::after {
   background-image: url("../images/icons/tick-focus.svg");
 }
 
@@ -1894,11 +1950,35 @@
   color: #af4fff;
 }
 
+.filters__radio:not(:focus-visible) + .filters__label--radio {
+  color: inherit;
+}
+
+.filters__radio:focus-visible + .filters__label--radio {
+  color: #af4fff;
+}
+
 .filters__radio:focus + .filters__label--radio::before {
   border-color: #af4fff;
 }
 
+.filters__radio:not(:focus-visible) + .filters__label--radio::before {
+  border-color: #000000;
+}
+
+.filters__radio:focus-visible + .filters__label--radio::before {
+  border-color: #af4fff;
+}
+
 .filters__radio:focus + .filters__label--radio::after {
+  background-color: #af4fff;
+}
+
+.filters__radio:not(:focus-visible) + .filters__label--radio::after {
+  background-color: #000000;
+}
+
+.filters__radio:focus-visible + .filters__label--radio::after {
   background-color: #af4fff;
 }
 
@@ -2009,11 +2089,28 @@
   outline: 5px solid #af4fff;
 }
 
+.selection__summary:focus:not(:focus-visible)::before {
+  outline: none;
+}
+
+.selection__summary:focus-visible::before {
+  outline: 5px solid #af4fff;
+}
+
 .selection[open] .selection__summary:focus::before {
   outline: none;
 }
 
 .selection[open] .selection__summary:focus::after {
+  outline: 3px solid #af4fff;
+  outline-offset: 5px;
+}
+
+.selection[open] .selection__summary:not(:focus-visible)::after {
+  outline: none;
+}
+
+.selection[open] .selection__summary:focus-visible::after {
   outline: 3px solid #af4fff;
   outline-offset: 5px;
 }
