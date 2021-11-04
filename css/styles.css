@@ -1643,13 +1643,15 @@
 .filters__group::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -48px;
   left: -1px;
   right: 69px;
   border-top: 2px solid #000000;
 }
 
 .filters__legend {
+  position: relative;
+  top: 14px;
   margin: 0;
   padding: 0;
   margin-bottom: 28px;
