@@ -1641,7 +1641,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1px;
   right: 69px;
   border-top: 2px solid #000000;
 }
@@ -1656,28 +1656,101 @@
   letter-spacing: -0.02em;
 }
 
-.range-sliders {
-  display: grid;
-  grid-template-rows: 25px 19px;
+.filters__slider {
+  box-sizing: border-box;
+  width: 200px;
+  height: 44px;
 }
 
-.range-sliders__container {
-  display: flex;
+.range-slider {
+  position: relative;
+  background: no-repeat linear-gradient(to right, #000000 119px, transparent 119px)  0 9px / 100% 2px;
 }
 
-.range-sliders__label {
+.range-slider__group {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+  padding-top: 1px;
+  pointer-events: none;
+}
+
+.range-slider__group:last-of-type {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.range-slider__range {
+  margin: 0;
+  margin-bottom: 7px;
+  background-color: transparent;
+  appearance: none;
+}
+
+.range-slider__range::-webkit-slider-thumb {
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  background-color: #ebebeb;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  pointer-events: auto;
+  appearance: none;
+  cursor: grab;
+}
+
+.range-slider__range::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  background-color: #ebebeb;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  appearance: none;
+  pointer-events: auto;
+  cursor: grab;
+}
+
+.range-slider__label {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 18px;
   color: #a5a5a5;
+  pointer-events: auto;
 }
 
-.range-sliders__input {
-  width: 100%;
+.range-slider__range[value="0"] + .range-slider__label {
+  left: -5px;
+}
+
+.range-slider__range[value="5000"] + .range-slider__label {
+  left: 90px;
+}
+
+.range-slider__number {
+  /* Цель вычисления - прибавить к ширине символа(-ов) отступ
+  под дефолтные кнопки поля <input type="number">  */
+  width: calc(1ch + 3ch);
   color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: 0.1em;
   background: none;
   border: none;
+}
+
+/* Поле с 4-мя символами (5000) - имитация работы скрипта, который
+вычисляет ширину поля исходя из текущего количества символов в нём */
+.range-slider__number[data-num-length="4"] {
+  width: calc(4ch + 3ch);
 }
 
 .filters__input-list {

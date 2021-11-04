@@ -112,19 +112,22 @@
             </div>
             <fieldset class="filters__group">
               <span><legend class="filters__legend">Стоимость</legend></span>
-              <div class="filters__sliders range-sliders">
-                <div class="range-sliders__container">
-                  <button class="range-sliders__knob range-sliders__knob--min" type="button" aria-hidden="true" tabindex="-1"></button>
-                  <button class="range-sliders__knob range-sliders__knob--max" type="button" aria-hidden="true" tabindex="-1"></button>
-                </div>
-                <div class="range-sliders__container">
-                  <label class="filters__label range-sliders__label">
-                    от <input class="range-sliders__input" type="number" name="min-price" value="0">
+              <div class="filters__slider range-slider">
+                <p class="range-slider__group">
+                  <!-- Текущее значение ползунка используется для позиционирования label под ним -->
+                  <input class="range-slider__range" type="range" min="0" max="8300" value="0" step="200" aria-label="Минимальная цена"/>
+                  <label class="filters__label range-slider__label">
+                    от <input class="range-slider__number" type="number" name="min-price" value="0">
                   </label>
-                  <label class="filters__label range-sliders__label">
-                    до <input class="range-sliders__input" type="number" name="max-price" value="5000">
+                </p>
+                <p class="range-slider__group">
+                  <!-- Текущее значение ползунка используется для позиционирования label под ним -->
+                  <input class="range-slider__range" type="range" min="0" max="8300" value="5000" step="200" aria-label="Максимальная цена"/>
+                  <label class="filters__label range-slider__label">
+                    <!-- Здесь data-атрибут - это имитация результата выполнения скрипта, определяющего текущее количество символов в поле -->
+                    до <input class="range-slider__number" type="number" name="max-price" value="5000" data-num-length="4">
                   </label>
-                </div>
+                </p>
               </div>
             </fieldset>
             <fieldset class="filters__group">
