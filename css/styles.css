@@ -1850,8 +1850,8 @@
   width: 20px;
   height: 20px;
   border: 2px solid #000000;
-  opacity: var(--border-opacity);
   border-radius: 3px;
+  opacity: var(--border-opacity);
 }
 
 .filters__label--checkbox::after {
@@ -1930,6 +1930,11 @@
 }
 
 .filters__label--radio {
+  --opacity: 1;
+  --border-opacity: 0.2;
+  --point-diplay: none;
+  --point-color: #000000;
+  opacity: var(--opacity);
   cursor: pointer;
 }
 
@@ -1944,6 +1949,7 @@
   height: 20px;
   border: 2px solid #000000;
   border-radius: 20px;
+  opacity: var(--border-opacity);
 }
 
 .filters__label--radio::after {
@@ -1951,40 +1957,36 @@
   position: absolute;
   top: 6px;
   left: 6px;
-  display: none;
+  display: var(--point-diplay);
   box-sizing: border-box;
   width: 8px;
   height: 8px;
-  background-color: #000000;
+  background-color: var(--point-color);
   border-radius: 4px;
 }
 
-/* Радио ON :: Покой :: 1) Появляется галочка у псевдоэлемента лейбла... */
-.filters__radio:checked + .filters__label--radio::after {
-  display: block;
-}
+/* Радио ON :: Покой :: 1) Появляется точка на псевдоэлементе лейбла... */
 /* ...2) Снимается прозрачность с рамки песевдоэлемента лейбла*/
-.filters__radio:checked + .filters__label--radio::before {
-  opacity: 1;
+.filters__radio:checked + .filters__label--radio {
+  --point-diplay: block;
+  --border-opacity: 1;
 }
 
 /* Радио ON :: Наведение :: Прозрачность на всём лейбле  */
 .filters__radio:checked:hover + .filters__label--radio {
-  opacity: 0.5;
+  --opacity: 0.5;
 }
 
 /* Радио ON :: Нажатие :: Прозрачность на всём лейбле  */
 .filters__radio:checked:active + .filters__label--radio {
-  opacity: 0.2;
+  --opacity: 0.2;
 }
 
 /* Радио OFF :: Нажатие :: 1) Рамка псевдоэлемента лейбла непрозрачна,...  */
-.filters__radio:not(:checked):active + .filters__label--radio::before {
-  opacity: 1;
-}
 /* ...2) Прозрачность на всём лейбле */
 .filters__radio:not(:checked):active + .filters__label--radio {
-  opacity: 0.2;
+  --border-opacity: 1;
+  --opacity: 0.2;
 }
 
 /* Фокус :: Резерв */
@@ -1997,7 +1999,7 @@
 }
 
 .filters__radio:focus + .filters__label--radio::after {
-  background-color: #af4fff;
+  --point-color: #af4fff;
 }
 
 /* Фокус :: Отмена */
@@ -2010,7 +2012,7 @@
 }
 
 .filters__radio:focus:not(:focus-visible) + .filters__label--radio::after {
-  background-color: #000000;
+  --point-color: #000000;
 }
 
 /* Фокус :: С клавиатуры */
@@ -2023,7 +2025,7 @@
 }
 
 .filters__radio:focus-visible + .filters__label--radio::after {
-  background-color: #af4fff;
+  --point-color: #af4fff;
 }
 
 .filters__button {
