@@ -1833,6 +1833,14 @@
   padding-bottom: 0;
 }
 
+.filters__label--checkbox {
+  --opacity: 1;
+  --border-opacity: 0.2;
+  --checkmark-display: none;
+  opacity: var(--opacity);
+  cursor: pointer;
+}
+
 .filters__label--checkbox::before {
   content: "";
   position: absolute;
@@ -1842,6 +1850,7 @@
   width: 20px;
   height: 20px;
   border: 2px solid #000000;
+  opacity: var(--border-opacity);
   border-radius: 3px;
 }
 
@@ -1850,46 +1859,39 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  display: var(--checkmark-display);
   box-sizing: border-box;
   width: 20px;
   height: 20px;
   background: no-repeat url("../images/icons/tick.svg") center / 10px 10px;
 }
 
+/* Чекбокс ON :: Покой :: 1) Появляется галочка у псевдоэлемента лейбла... */
+/* ...2) Снимается прозрачность с рамки песевдоэлемента лейбла*/
+.filters__checkbox:checked + .filters__label--checkbox {
+  --checkmark-display: block;
+  --border-opacity: 1;
+}
+
+/* Чекбокс ON :: Наведение :: Прозрачность на всём лейбле  */
 .filters__checkbox:checked:hover + .filters__label--checkbox {
-  opacity: 0.5;
+  --opacity: 0.5;
 }
 
-.filters__checkbox:not(:checked):hover + .filters__label--checkbox {
-  color: #bcbcbc;
+/* Чекбокс ON :: Нажатие :: Прозрачность на всём лейбле  */
+.filters__checkbox:checked:active + .filters__label--checkbox {
+  --opacity: 0.2;
 }
 
-.filters__checkbox:not(:checked):focus:hover + .filters__label--checkbox {
-  color: #af4fff;
+/* Чекбокс OFF :: Нажатие :: 1) Рамка псевдоэлемента лейбла непрозрачна,...  */
+/* ...2) Прозрачность на всём лейбле */
+.filters__checkbox:not(:checked):active + .filters__label--checkbox {
+  --border-opacity: 1;
+  --opacity: 0.2;
 }
 
-.filters__checkbox:not(:checked):not(:focus-visible):hover + .filters__label--checkbox {
-  color: #bcbcbc;
-}
-
-.filters__checkbox:not(:checked):focus-visible:hover + .filters__label--checkbox {
-  color: #af4fff;
-}
-
-.filters__checkbox:checked + .filters__label--checkbox::after {
-  display: block;
-}
-
+/* Фокус :: Резерв */
 .filters__checkbox:focus + .filters__label--checkbox {
-  color: #af4fff;
-}
-
-.filters__checkbox:not(:focus-visible) + .filters__label--checkbox {
-  color: #000000;
-}
-
-.filters__checkbox:focus-visible + .filters__label--checkbox {
   color: #af4fff;
 }
 
@@ -1897,24 +1899,38 @@
   border-color: #af4fff;
 }
 
-.filters__checkbox:not(:focus-visible) + .filters__label--checkbox::before {
+.filters__checkbox:focus + .filters__label--checkbox::after {
+  background-image: url("../images/icons/tick-focus.svg");
+}
+
+/* Фокус :: Отмена */
+.filters__checkbox:focus:not(:focus-visible) + .filters__label--checkbox {
+  color: #000000;
+}
+
+.filters__checkbox:focus:not(:focus-visible) + .filters__label--checkbox::before {
   border-color: #000000;
+}
+
+.filters__checkbox:focus:not(:focus-visible) + .filters__label--checkbox::after {
+  background-image: url("../images/icons/tick.svg");
+}
+
+/* Фокус :: С клавиатуры */
+.filters__checkbox:focus-visible + .filters__label--checkbox {
+  color: #af4fff;
 }
 
 .filters__checkbox:focus-visible + .filters__label--checkbox::before {
   border-color: #af4fff;
 }
 
-.filters__checkbox:focus + .filters__label--checkbox::after {
-  background-image: url("../images/icons/tick-focus.svg");
-}
-
-.filters__checkbox:not(:focus-visible) + .filters__label--checkbox::after {
-  background-image: url("../images/icons/tick.svg");
-}
-
 .filters__checkbox:focus-visible + .filters__label--checkbox::after {
   background-image: url("../images/icons/tick-focus.svg");
+}
+
+.filters__label--radio {
+  cursor: pointer;
 }
 
 .filters__label--radio::before {
@@ -1943,27 +1959,36 @@
   border-radius: 4px;
 }
 
+/* Радио ON :: Покой :: 1) Появляется галочка у псевдоэлемента лейбла... */
+.filters__radio:checked + .filters__label--radio::after {
+  display: block;
+}
+/* ...2) Снимается прозрачность с рамки песевдоэлемента лейбла*/
+.filters__radio:checked + .filters__label--radio::before {
+  opacity: 1;
+}
+
+/* Радио ON :: Наведение :: Прозрачность на всём лейбле  */
 .filters__radio:checked:hover + .filters__label--radio {
   opacity: 0.5;
 }
 
-.filters__radio:not(:checked):hover + .filters__label--radio {
-  color: #bcbcbc;
+/* Радио ON :: Нажатие :: Прозрачность на всём лейбле  */
+.filters__radio:checked:active + .filters__label--radio {
+  opacity: 0.2;
 }
 
-.filters__radio:checked + .filters__label--radio::after {
-  display: block;
+/* Радио OFF :: Нажатие :: 1) Рамка псевдоэлемента лейбла непрозрачна,...  */
+.filters__radio:not(:checked):active + .filters__label--radio::before {
+  opacity: 1;
+}
+/* ...2) Прозрачность на всём лейбле */
+.filters__radio:not(:checked):active + .filters__label--radio {
+  opacity: 0.2;
 }
 
+/* Фокус :: Резерв */
 .filters__radio:focus + .filters__label--radio {
-  color: #af4fff;
-}
-
-.filters__radio:not(:focus-visible) + .filters__label--radio {
-  color: inherit;
-}
-
-.filters__radio:focus-visible + .filters__label--radio {
   color: #af4fff;
 }
 
@@ -1971,20 +1996,30 @@
   border-color: #af4fff;
 }
 
-.filters__radio:not(:focus-visible) + .filters__label--radio::before {
-  border-color: #000000;
-}
-
-.filters__radio:focus-visible + .filters__label--radio::before {
-  border-color: #af4fff;
-}
-
 .filters__radio:focus + .filters__label--radio::after {
   background-color: #af4fff;
 }
 
-.filters__radio:not(:focus-visible) + .filters__label--radio::after {
+/* Фокус :: Отмена */
+.filters__radio:focus:not(:focus-visible) + .filters__label--radio {
+  color: #000000;
+}
+
+.filters__radio:focus:not(:focus-visible) + .filters__label--radio::before {
+  border-color: #000000;
+}
+
+.filters__radio:focus:not(:focus-visible) + .filters__label--radio::after {
   background-color: #000000;
+}
+
+/* Фокус :: С клавиатуры */
+.filters__radio:focus-visible + .filters__label--radio {
+  color: #af4fff;
+}
+
+.filters__radio:focus-visible + .filters__label--radio::before {
+  border-color: #af4fff;
 }
 
 .filters__radio:focus-visible + .filters__label--radio::after {
