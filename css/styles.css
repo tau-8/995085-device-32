@@ -610,6 +610,7 @@
 
 /* Поповер корзины */
 .popover {
+  z-index: 2;
   position: absolute;
   display: none;
   color: #ffffff;
