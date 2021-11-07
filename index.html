@@ -29,6 +29,39 @@
         </li>
         <li class="user-menu__item">
           <a class="user-menu__link user-menu__link--cart link" href="#" data-amount="2">Корзина</a>
+
+          <div class="popover">
+            <div class="popover__content minicart">
+              <h2 class="visually-hidden">Попап корзины:</h2>
+              <ul class="minicart__products">
+                <li class="minicart__product">
+                  <a class="minicart__link link" href="javascript:undefined">Любительская селфи-палка</a>
+                  <img class="minicart__image" src="images\minicart-product-1.jpg" alt="Миниатюрное изображение товара" width="41" height="43">
+                  <button class="minicart__button minicart__button--delete" type="button">
+                    <span class="visually-hidden">Удалить товар из корзины</span>
+                  </button>
+                </li>
+                <li class="minicart__product">
+                  <a class="minicart__link link" href="javascript:undefined">Профессиональная селфи-палка</a>
+                  <img class="minicart__image" src="images\minicart-product-2.jpg" alt="Миниатюрное изображение товара" width="41" height="43">
+                  <button class="minicart__button minicart__button--delete" type="button">
+                    <span class="visually-hidden">Удалить товар из корзины</span>
+                  </button>
+                </li>
+              </ul>
+              <dl class="minicart__summary">
+                <div class="minicart__summary-wrapper">
+                  <dd class="minicart__key">Товаров:</dd>
+                  <dt class="minicart__value">2</dt>
+                </div>
+                <div class="minicart__summary-wrapper">
+                  <dd class="minicart__key">Сумма:</dd>
+                  <dt class="minicart__value">2000 &#8381;</dt>
+                </div>
+              </dl>
+              <a class="minicart__cart-link link link--uppercase" href="javascript:undefined">Открыть корзину</a>
+            </div>
+          </div>
         </li>
       </ul>
 
@@ -312,7 +345,7 @@
       </div>
 
       <section class="main__subscription subscription">
-        <div class="page__centerer subscription_grid">
+        <div class="page__centerer subscription__grid">
           <h2 class="subscription__title section-title">Подпишитесь<br>на рассылку</h2>
           <p class="subscription__info">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="subscription__form email-form" action="#" method="POST">

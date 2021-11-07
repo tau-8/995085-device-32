@@ -206,7 +206,7 @@
 \\\ Шапка сайта \\\
 \\\\\\\\\\\\\\\\\*/
 .header {
-  z-index: 1;
+  z-index: 3;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -606,6 +606,215 @@
 
 .catalog-dropdown__link:active {
   opacity: 0.3;
+}
+
+/* Поповер корзины */
+.popover {
+  position: absolute;
+  display: none;
+  color: #ffffff;
+  background-color: #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  top: 43px;
+  right: -60px;
+}
+
+/* Показывает поповер */
+.popover--visible {
+  display: block;
+}
+
+.popover__content {
+  position: relative;
+}
+
+.popover__content::before {
+  --width: 14px;
+  --height: 6px;
+  content: "";
+  position: absolute;
+  top: calc(var(--height) * -1);
+  right: 50%;
+  width: var(--width);
+  height: var(--height);
+  transform: translateX(calc(50% - 3px));
+  background: no-repeat url("../images/icons/bubble-tail.svg") center / var(--width) var(--height);
+}
+
+.minicart {
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 150px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.minicart__products {
+  padding: 0;
+  list-style-type: none;
+}
+
+.minicart__product {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 23px;
+  padding: 20px;
+}
+
+.minicart__product + .minicart__product {
+  border-top: 1px solid #191919;
+}
+
+.minicart__image {
+  order: -1;
+  width: 41px;
+  height: 43px;
+}
+
+.minicart__link {
+  z-index: 1;
+  position: relative;
+  align-self: center;
+  text-align: left;
+}
+
+.minicart__link::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  bottom: -20px;
+  left: -84px;
+  right: 0;
+}
+
+.minicart__link:hover,
+.minicart__link:hover + .minicart__image {
+  opacity: 0.6;
+}
+
+.minicart__link:active,
+.minicart__link:active + .minicart__image {
+  opacity: 0.3;
+}
+
+/* Резерв */
+.minicart__link:focus {
+  outline: none;
+  color: #af4fff;
+}
+
+.minicart__link:focus + .minicart__image {
+  outline: 5px solid #af4fff;
+}
+
+/* Отмена */
+.minicart__link:focus:not(:focus-visible) {
+  outline: none;
+  color: inherit;
+}
+
+.minicart__link:focus:not(:focus-visible) + .minicart__image {
+  outline: none;
+}
+
+/* С клавиатуры */
+.minicart__link:focus-visible {
+  outline: none;
+  color: #af4fff;
+}
+
+.minicart__link:focus-visible + .minicart__image {
+  outline: 5px solid #af4fff;
+}
+
+.minicart__button {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.minicart__button--delete {
+  transform: translateX(7px);
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  background: no-repeat url("../images/icons/delete.svg") center / 11px 11px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.minicart__button:hover {
+  opacity: 0.6;
+}
+
+.minicart__button:active {
+  opacity: 0.3;
+}
+
+/* Резерв */
+.minicart__button:focus {
+  outline: 2px solid #af4fff;
+}
+
+/* Отмена */
+.minicart__button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* С клавиатуры */
+.minicart__button:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
+.minicart__summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 11px 21px 13px 20px;
+  background: #1a1a1a;
+}
+
+.minicart__summary-wrapper {
+  display: flex;
+  column-gap: 4px;
+}
+
+.minicart__key {
+  margin: 0;
+}
+
+.minicart__cart-link {
+  display: block;
+  padding: 15px 12px 14px 17px;
+  margin: 20px 20px 21px;
+  color: #000000;
+  background-color: #ffffff;
+  outline-offset: -1px;
+}
+
+.minicart__cart-link:hover {
+  background-color: #ffe17f;
+}
+
+.minicart__cart-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Резерв */
+.minicart__cart-link:focus {
+  outline: 5px solid #af4fff;
+}
+
+/* Отмена */
+.minicart__cart-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* С клавиатуры */
+.minicart__cart-link:focus-visible {
+  outline: 5px solid #af4fff;
 }
 
 /*\\\\\\\\\\\\\\\\
@@ -1375,7 +1584,7 @@
   background-color: #f0f0f0;
 }
 
-.subscription_grid {
+.subscription__grid {
   display: grid;
   grid-template-columns: 600px 260px 300px;
   grid-template-rows: minmax(160px, auto) 55px;
