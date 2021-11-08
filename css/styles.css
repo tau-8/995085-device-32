@@ -612,12 +612,16 @@
 .popover {
   z-index: 2;
   position: absolute;
-  display: none;
   color: #ffffff;
   background-color: #000000;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
   top: 43px;
   right: -60px;
+}
+
+/* Показывает поповер */
+.popover--hidden {
+  display: none;
 }
 
 /* Показывает поповер */
