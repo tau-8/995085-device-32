@@ -2307,11 +2307,7 @@
 }
 
 .selection[open] .selection__summary::after {
-  top: 8px;
-  right: 7px;
-  width: 11px;
-  height: 11px;
-  background: no-repeat url("../images/icons/nav-arrow.svg") center / 11px 11px;
+  transform: rotate(180deg);
 }
 
 .selection__summary:hover .selection__selected {
@@ -2356,28 +2352,40 @@
   outline-offset: 5px;
 }
 
-.selection__options {
+/* Варианты переделаны под поповер */
+.selection__popover {
   position: absolute;
-  top: 0;
+  top: 31px;
   left: 0;
-  box-sizing: border-box;
-  width: 100%;
+  transform: translateX(-20px);
+  width: 250px;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.selection__options {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .selection__option {
+  position: relative;
   display: block;
-  width: 100%;
-  padding: 3px 0 4px 9px;
+  padding: 10px 30px;
   text-decoration: none;
   color: inherit;
-  background-color: #dcdcdc;
 }
 
-.selection__option:last-child {
-  margin-bottom: 0;
+.selection__option--selected::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #ffc700;
 }
 
 .selection__option:hover {
@@ -2390,7 +2398,7 @@
 
 .selection__option:focus {
   outline: 3px solid #af4fff;
-  outline-offset: -2px;
+  outline-offset: 0;
 }
 
 .selection__option:focus:not(:focus-visible) {
@@ -2399,7 +2407,7 @@
 
 .selection__option:focus-visible {
   outline: 3px solid #af4fff;
-  outline-offset: -2px;
+  outline-offset: 0;
 }
 
 .sorting__order {
