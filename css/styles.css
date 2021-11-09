@@ -610,11 +610,7 @@
 
 /* Поповер корзины */
 .popover {
-  --popover-width: 100%;
-  --padding-top: 0;
-  --padding-right: 0;
-  --compensate-Y: calc(var(--padding-top) * 1px);
-  --compensate-X: calc(var(--padding-right) * 1px);
+  --horizontal-shift: -3px;
   z-index: 2;
   position: absolute;
   color: #ffffff;
@@ -622,6 +618,18 @@
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
   top: 43px;
   right: -60px;
+}
+
+.popover::before {
+  --width: 14px;
+  --height: 6px;
+  content: "";
+  position: absolute;
+  top: calc(var(--height) * -1);
+  left: calc(50% - var(--width) / 2 + var(--horizontal-shift));
+  width: var(--width);
+  height: var(--height);
+  background: no-repeat url("../images/icons/bubble-tail.svg") center / var(--width) var(--height);
 }
 
 /* Показывает поповер */
@@ -636,18 +644,6 @@
 
 .popover__content {
   position: relative;
-}
-
-.popover__content::before {
-  --width: 14px;
-  --height: 6px;
-  content: "";
-  position: absolute;
-  top: calc((var(--height) + var(--compensate-Y)) * -1);
-  left: calc((var(--popover-width) / 2) - (var(--width) / 2) - var(--compensate-X));
-  width: var(--width);
-  height: var(--height);
-  background: no-repeat url("../images/icons/bubble-tail.svg") center / var(--width) var(--height);
 }
 
 .minicart {
@@ -3217,14 +3213,10 @@
   color: #ff3d3d;
 }
 
-.delivery-form__info {
+.info {
   position: absolute;
   top: -2px;
   right: -35px;
-}
-
-.info {
-  position: relative;
   display: block;
   width: 26px;
   height: 26px;
@@ -3248,17 +3240,14 @@
 
 .info__tooltip {
   --popover-width: 200px;
-  --padding-top: 19px;
-  --padding-right: 17px;
-  --compensate-Y: var(--padding-top);
-  --compensate-X: calc(var(--padding-right) - 53px);
+  --horizontal-shift: 53px;
   position: absolute;
   top: 36px;
   right: -34px;
   display: none;
   box-sizing: border-box;
   width: var(--popover-width);
-  padding: var(--padding-top) var(--padding-right) 21px 17px;
+  padding: 19px 17px 21px 17px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 16px;
