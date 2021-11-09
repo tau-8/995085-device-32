@@ -7,6 +7,7 @@ const deliveryButton = document.querySelector('.delivery__button');
 const deliveryModal = document.querySelector('.delivery-modal');
 const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector('.delivery-modal__close');
+const modalTitle = document.querySelector('.delivery-modal__title');
 let deliveryModalIsOn = false;
 
 cartLink.addEventListener('click', event => {
@@ -23,6 +24,7 @@ cartLink.addEventListener('click', event => {
 deliveryButton.addEventListener('click', event => {
   event.stopPropagation();
   swapClass(deliveryModal, deliveryModal.classList[0], deliveryModalIsOn);
+  modalTitle.focus();
   if (!deliveryModalIsOn) {
     modal.addEventListener('click', closeModal);
     modalCloseButton.addEventListener('click', closeModal);

@@ -3080,6 +3080,7 @@
 .delivery-modal__title {
   margin: 0;
   margin-bottom: 67px;
+  outline: 0;
 }
 
 .delivery-modal__close {
