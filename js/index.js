@@ -1,5 +1,6 @@
 const cartLink = document.querySelector('.user-menu__link--cart');
 const cartPopover = document.querySelector('.minicart');
+const cartElements = document.querySelectorAll('.minicart *');
 let cartPopoverIsOn = false;
 
 const deliveryButton = document.querySelector('.delivery__button');

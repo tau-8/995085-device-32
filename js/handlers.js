@@ -10,7 +10,12 @@ const swapClass = (target, className, isVisible) => {
 }
 
 // Закрывает поповер нажатием вне его
-const closePopover = () => {
+const closePopover = (e) => {
+  for (element of cartElements) {
+    if (e.target === cartPopover || e.target === element) {
+      return;
+    }
+  }
   cartPopover.classList.remove(toggleModifier(cartPopover.classList[0], cartPopoverIsOn, '--hidden', '--visible'));
   cartPopover.classList.add(toggleModifier(cartPopover.classList[0], !cartPopoverIsOn, '--hidden', '--visible'));
   cartPopoverIsOn = !cartPopoverIsOn;
