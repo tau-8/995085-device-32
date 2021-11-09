@@ -632,21 +632,21 @@
   background: no-repeat url("../images/icons/bubble-tail.svg") center / var(--width) var(--height);
 }
 
-/* Показывает поповер */
-.popover--hidden {
-  display: none;
-}
-
-/* Показывает поповер */
-.popover--visible {
-  display: block;
-}
-
 .popover__content {
   position: relative;
 }
 
-.minicart {
+/* Показывает поповер корзины */
+.minicart--hidden {
+  display: none;
+}
+
+/* Показывает поповер корзины */
+.minicart--visible {
+  display: block;
+}
+
+.minicart__content {
   box-sizing: border-box;
   width: 320px;
   min-height: 150px;
@@ -3018,35 +3018,20 @@
 }
 
 /* Модальное окно */
-
 .modal {
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
 }
 
-/* Скрывает модальное окно */
-.modal--hidden {
-  display: none;
-}
-
-/* Показывает модальное окно */
-.modal--visible {
-  display: block;
-}
-
-.modal__centerer {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
 .modal__content {
+  position: relative;
   box-sizing: border-box;
   margin: auto;
   padding: 63px 70px;
@@ -3057,8 +3042,19 @@
   cursor: initial;
 }
 
-.delivery-modal {
-  position: relative;
+/* Модальное окно доставки */
+
+/* Скрывает модальное окно */
+.delivery-modal--hidden {
+  display: none;
+}
+
+/* Показывает модальное окно */
+.delivery-modal--visible {
+  display: flex;
+}
+
+.delivery-modal__content {
   width: 920px;
 }
 

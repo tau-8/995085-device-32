@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js" defer></script>
+    <script src="js/handlers.js" defer></script>
   </head>
 
   <body class="page__body">
@@ -14,7 +16,7 @@
         </a>
       </div>
 
-      <form class="header__search site-search" action="#" method="POST">
+      <form class="header__search site-search" action="https://echo.htmlacademy.ru/" method="POST">
         <label class="site-search__label" for="site-search"><span class="visually-hidden">Поиск по сайту</span></label>
         <input class="site-search__field" id="site-search" type="search" placeholder="Поиск по сайту">
         <button class="site-search__button" type="submit">Найти</button>
@@ -22,16 +24,16 @@
 
       <ul class="header__user-menu user-menu">
         <li class="user-menu__item">
-          <a class="user-menu__link user-menu__link--login link" href="#">Войти</a>
+          <a class="user-menu__link user-menu__link--login link" href="javascript:undefined">Войти</a>
         </li>
         <li class="user-menu__item">
-          <a class="user-menu__link user-menu__link--compare link" href="#">Сравнить</a>
+          <a class="user-menu__link user-menu__link--compare link" href="javascript:undefined">Сравнить</a>
         </li>
         <li class="user-menu__item">
-          <a class="user-menu__link user-menu__link--cart link" href="#" data-amount="2">Корзина</a>
+          <a class="user-menu__link user-menu__link--cart link" href="javascript:undefined" data-amount="2">Корзина</a>
 
-          <div class="popover popover--hidden">
-            <div class="popover__content minicart">
+          <div class="minicart minicart--hidden popover">
+            <div class="minicart__content popover__content">
               <h2 class="visually-hidden">Попап корзины:</h2>
               <ul class="minicart__products">
                 <li class="minicart__product">
@@ -75,13 +77,13 @@
                   <span class="visually-hidden">Виртуальная реальность и товары для съёмки</span>
                   <ul class="catalog-dropdown__nested">
                     <li>
-                      <a class="catalog-dropdown__link link" href="#">Виртуальная реальность</a>
+                      <a class="catalog-dropdown__link link" href="javascript:undefined">Виртуальная реальность</a>
                     </li>
                     <li>
                       <a class="catalog-dropdown__link link" href="catalog.html">Моноподы для cелфи</a>
                     </li>
                     <li>
-                      <a class="catalog-dropdown__link link" href="#">Экшн-камеры</a>
+                      <a class="catalog-dropdown__link link" href="javascript:undefined">Экшн-камеры</a>
                     </li>
                   </ul>
                 </li>
@@ -89,28 +91,28 @@
                   <span class="visually-hidden">Наручные гаджеты</span>
                   <ul class="catalog-dropdown__nested">
                     <li>
-                      <a class="catalog-dropdown__link link" href="#">Фитнес-браслеты</a>
+                      <a class="catalog-dropdown__link link" href="javascript:undefined">Фитнес-браслеты</a>
                     </li>
                     <li>
-                      <a class="catalog-dropdown__link link" href="#">Умные часы</a>
+                      <a class="catalog-dropdown__link link" href="javascript:undefined">Умные часы</a>
                     </li>
                   </ul>
                 </li>
                 <li class="catalog-dropdown__item">
-                  <a class="catalog-dropdown__link link" href="#">Квадрокоптеры</a>
+                  <a class="catalog-dropdown__link link" href="javascript:undefined">Квадрокоптеры</a>
                 </li>
               </ul>
             </div>
             <button class="visually-hidden" type="button">Раскрыть меню категорий каталога товаров</button>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="#">Доставка</a>
+            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="javascript:undefined">Доставка</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="#">Гарантия</a>
+            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="javascript:undefined">Гарантия</a>
           </li>
           <li class="site-navigation__item">
-            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="#">Контакты</a>
+            <a class="site-navigation__link site-navigation__link--normal link link--uppercase" href="javascript:undefined">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -155,7 +157,7 @@
               <img class="product__image" src="images/popular-01.png" width="560" height="560" alt="Дрон-поджигатель">
               <b class="product__slogan">Порхает как бабочка, <br>жалит как пчела!</b>
               <p class="product__info">Этот обычный, на первый взгляд, квадрокоптер оснащён мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="product__button button link" href="#">Подробнее</a>
+              <a class="product__button button link" href="javascript:undefined">Подробнее</a>
               <table class="product__specs">
                 <tr>
                   <td class="product__spec-key">
@@ -182,7 +184,7 @@
               <img class="product__image" src="images/popular-02.png" width="560" height="560" alt="Осуждающий фитнес-браслет">
               <b class="product__slogan">Худеем <br>правильно!</b>
               <p class="product__info">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <a class="product__button button link" href="#">Подробнее</a>
+              <a class="product__button button link" href="javascript:undefined">Подробнее</a>
               <table class="product__specs">
                 <tr>
                   <td class="product__spec-key">
@@ -201,7 +203,7 @@
               <img class="product__image" src="images/popular-03.png" width="560" height="560" alt="Восьмиметровая селфи-палка">
               <b class="product__slogan">Делай селфи, <br>как Бен Стиллер!</b>
               <p class="product__info">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-              <a class="product__button button link" href="#">Подробнее</a>
+              <a class="product__button button link" href="javascript:undefined">Подробнее</a>
               <table class="product__specs">
                 <tr>
                   <td class="product__spec-key">
@@ -237,7 +239,7 @@
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="categories__list">
           <li class="categories__item">
-            <a class="categories__link categories__link--vr link" href="#">
+            <a class="categories__link categories__link--vr link" href="javascript:undefined">
               <span>Виртуальная реальность</span>
             </a>
           </li>
@@ -247,22 +249,22 @@
             </a>
           </li>
           <li class="categories__item">
-            <a class="categories__link categories__link--cameras link" href="#">
+            <a class="categories__link categories__link--cameras link" href="javascript:undefined">
               <span>Экшн-камеры</span>
             </a>
           </li>
           <li class="categories__item">
-            <a class="categories__link categories__link--bracelets link" href="#">
+            <a class="categories__link categories__link--bracelets link" href="javascript:undefined">
               <span>Фитнес-браслеты</span>
             </a>
           </li>
           <li class="categories__item">
-            <a class="categories__link categories__link--watches link" href="#">
+            <a class="categories__link categories__link--watches link" href="javascript:undefined">
               <span>Умные часы</span>
             </a>
           </li>
           <li class="categories__item">
-            <a class="categories__link categories__link--drones link" href="#">
+            <a class="categories__link categories__link--drones link" href="javascript:undefined">
               <span>Квадрокоптеры</span>
             </a>
           </li>
@@ -303,7 +305,7 @@
 
       <section class="main__delivery page__centerer delivery">
         <h2 class="visually-hidden">Доставка под заказ</h2>
-        <a class="delivery__button link" href="#">
+        <a class="delivery__button link" href="javascript:undefined">
           <span>Доставим редкий товар под заказ</span>
         </a>
       </section>
@@ -324,7 +326,7 @@
               <p>ТоксБерри</p>
             </li>
           </ul>
-          <a class="about__button button link" href="#">Подробнее о нас</a>
+          <a class="about__button button link" href="javascript:undefined">Подробнее о нас</a>
         </section>
 
         <section class="main__contacts contacts">
@@ -340,7 +342,7 @@
             <li class="contacts__schedule-item">пн—пт: с 10:00 до 22:00</li>
             <li class="contacts__schedule-item">сб—вс: с 10:00 до 19:00</li>
           </ul>
-          <a class="contacts__button button link" href="#">Напишите нам</a>
+          <a class="contacts__button button link" href="javascript:undefined">Напишите нам</a>
         </section>
       </div>
 
@@ -348,7 +350,7 @@
         <div class="page__centerer subscription__grid">
           <h2 class="subscription__title section-title">Подпишитесь<br>на рассылку</h2>
           <p class="subscription__info">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-          <form class="subscription__form email-form" action="#" method="POST">
+          <form class="subscription__form email-form" action="javascript:undefined" method="POST">
             <label class="email-form__label" for="subscription-field">
               <span class="visually-hidden">Укажите ваш e-mail</span>
             </label>
@@ -372,13 +374,13 @@
           <h2 class="visually-hidden">Наши предложения</h2>
           <ul class="services-mini__list">
             <li class="services-mini__item">
-              <a class="services-mini__link link link--uppercase" href="#">Доставка</a>
+              <a class="services-mini__link link link--uppercase" href="javascript:undefined">Доставка</a>
             </li>
             <li class="services-mini__item">
-              <a class="services-mini__link link link--uppercase" href="#">Гарантия</a>
+              <a class="services-mini__link link link--uppercase" href="javascript:undefined">Гарантия</a>
             </li>
             <li class="services-mini__item">
-              <a class="services-mini__link link link--uppercase" href="#">Контакты</a>
+              <a class="services-mini__link link link--uppercase" href="javascript:undefined">Контакты</a>
             </li>
           </ul>
         </section>
@@ -439,54 +441,52 @@
       </div>
     </footer>
 
-    <div class="modal modal--hidden">
-      <div class="modal__centerer">
-        <section class="modal__content delivery-modal">
-          <h2 class="delivery-modal__title section-title">Доставка под заказ</h2>
-          <button class="delivery-modal__close">
-            <span class="visually-hidden">Закрыть модальное окно</span>
-          </button>
-          <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="GET">
-            <div class="delivery-form__grid">
-              <p class="delivery-form__wrapper delivery-form__wrapper--name">
-                <label class="delivery-form__label" for="delivery-name">Ваше имя:</label>
-                <input class="delivery-form__input" id="delivery-name" type="text" placeholder="Имя Фамилия" required>
-                <span class="delivery-form__tip delivery-form__tip--important">Пожалуйста, представьтесь</span>
-              </p>
-              <p class="delivery-form__wrapper delivery-form__wrapper--email">
-                <label class="delivery-form__label" for="delivery-email">Ваш e-mail:</label>
-                <input  class="delivery-form__input" id="delivery-email" type="email" placeholder="Введите e-mail" required>
-                <span class="delivery-form__tip">Забавный у вас адрес</span>
-              </p>
-              <p class="delivery-form__wrapper delivery-form__wrapper--comment">
-                <label class="delivery-form__label" for="delivery-comment">Что нужно привезти:</label>
-                <textarea class="delivery-form__input delivery-form__input--comment" id="delivery-comment" placeholder="В свободной форме" required></textarea>
-              </p>
-              <p class="delivery-form__wrapper delivery-form__wrapper--number">
-                <label class="delivery-form__label" for="delivery-number">Количество:
-                  <span class="info">
-                    <span class="info__tooltip popover">
-                      <span class="popover__content">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>к провозу багажа.</span>
-                    </span>
+    <div class="delivery-modal delivery-modal--hidden modal">
+      <section class="delivery-modal__content modal__content ">
+        <h2 class="delivery-modal__title section-title">Доставка под заказ</h2>
+        <button class="delivery-modal__close">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="GET">
+          <div class="delivery-form__grid">
+            <p class="delivery-form__wrapper delivery-form__wrapper--name">
+              <label class="delivery-form__label" for="delivery-name">Ваше имя:</label>
+              <input class="delivery-form__input" id="delivery-name" type="text" placeholder="Имя Фамилия" required>
+              <span class="delivery-form__tip delivery-form__tip--important">Пожалуйста, представьтесь</span>
+            </p>
+            <p class="delivery-form__wrapper delivery-form__wrapper--email">
+              <label class="delivery-form__label" for="delivery-email">Ваш e-mail:</label>
+              <input  class="delivery-form__input" id="delivery-email" type="email" placeholder="Введите e-mail" required>
+              <span class="delivery-form__tip">Забавный у вас адрес</span>
+            </p>
+            <p class="delivery-form__wrapper delivery-form__wrapper--comment">
+              <label class="delivery-form__label" for="delivery-comment">Что нужно привезти:</label>
+              <textarea class="delivery-form__input delivery-form__input--comment" id="delivery-comment" placeholder="В свободной форме" required></textarea>
+            </p>
+            <p class="delivery-form__wrapper delivery-form__wrapper--number">
+              <label class="delivery-form__label" for="delivery-number">Количество:
+                <span class="info">
+                  <span class="info__tooltip popover">
+                    <span class="popover__content">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>к провозу багажа.</span>
                   </span>
-                </label>
-                <span class="delivery-form__counter">
-                  <input class="delivery-form__input delivery-form__input--counter" id="delivery-number" type="number" value="1">
-                  <button class="delivery-form__button delivery-form__button--subtract" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" type="button">
-                    <span class="visually-hidden">Уменьшить количество</span>
-                  </button>
-                  <button class="delivery-form__button delivery-form__button--add" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" type="button">
-                    <span class="visually-hidden">Уменьшить количество</span>
-                  </button>
                 </span>
-              </p>
-            </div>
-            <button class="delivery-form__submit button" type="submit">
-              <span>Отправить</span>
-            </button>
-          </form>
-        </section>
-      </div>
+              </label>
+              <span class="delivery-form__counter">
+                <input class="delivery-form__input delivery-form__input--counter" id="delivery-number" type="number" value="1">
+                <button class="delivery-form__button delivery-form__button--subtract" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" type="button">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                </button>
+                <button class="delivery-form__button delivery-form__button--add" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" type="button">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                </button>
+              </span>
+            </p>
+          </div>
+          <button class="delivery-form__submit button" type="submit">
+            <span>Отправить</span>
+          </button>
+        </form>
+      </section>
     </div>
   </body>
 </html>
