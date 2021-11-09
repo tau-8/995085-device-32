@@ -3124,6 +3124,7 @@
 }
 
 .delivery-form__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -3155,11 +3156,33 @@
   letter-spacing: -0.02em;
 }
 
+.delivery-form__icon {
+  position: absolute;
+  top: 56px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.delivery-form__icon--name {
+  background-image: url("../images/icons/user.svg");
+}
+
+.delivery-form__icon--email {
+  background-image: url("../images/icons/mail.svg");
+}
+
 .delivery-form__input {
   box-sizing: border-box;
   min-width: 0;
   height: 60px;
   padding: 20px;
+  padding-right: 45px;
   font: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -3182,6 +3205,7 @@
 
 .delivery-form__input--comment {
   resize: vertical;
+  padding: 20px;
 }
 
 .delivery-form__input--comment:not(:placeholder-shown) {
