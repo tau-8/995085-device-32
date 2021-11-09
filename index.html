@@ -451,19 +451,19 @@
           <div class="delivery-form__grid">
             <p class="delivery-form__wrapper delivery-form__wrapper--name">
               <label class="delivery-form__label" for="delivery-name">Ваше имя:</label>
-              <input class="delivery-form__input" id="delivery-name" type="text" placeholder="Имя Фамилия" required>
+              <input class="delivery-form__input" id="delivery-name" type="text" placeholder="Имя Фамилия" name="name" required>
               <span class="delivery-form__icon delivery-form__icon--name"></span>
               <span class="delivery-form__tip delivery-form__tip--important">Пожалуйста, представьтесь</span>
             </p>
             <p class="delivery-form__wrapper delivery-form__wrapper--email">
               <label class="delivery-form__label" for="delivery-email">Ваш e-mail:</label>
-              <input  class="delivery-form__input" id="delivery-email" type="email" placeholder="Введите e-mail" required>
+              <input  class="delivery-form__input" id="delivery-email" type="email" placeholder="Введите e-mail" name="email" required>
               <span class="delivery-form__icon delivery-form__icon--email"></span>
               <span class="delivery-form__tip">Забавный у вас адрес</span>
             </p>
             <p class="delivery-form__wrapper delivery-form__wrapper--comment">
               <label class="delivery-form__label" for="delivery-comment">Что нужно привезти:</label>
-              <textarea class="delivery-form__input delivery-form__input--comment" id="delivery-comment" placeholder="В свободной форме" required></textarea>
+              <textarea class="delivery-form__input delivery-form__input--comment" id="delivery-comment" placeholder="В свободной форме" name="comment" required></textarea>
             </p>
             <p class="delivery-form__wrapper delivery-form__wrapper--number">
               <label class="delivery-form__label" for="delivery-number">Количество:
@@ -474,7 +474,7 @@
                 </span>
               </label>
               <span class="delivery-form__counter">
-                <input class="delivery-form__input delivery-form__input--counter" id="delivery-number" type="number" value="1">
+                <input class="delivery-form__input delivery-form__input--counter" id="delivery-number" type="number" value="1" name="amount">
                 <button class="delivery-form__button delivery-form__button--subtract" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" type="button">
                   <span class="visually-hidden">Уменьшить количество</span>
                 </button>
