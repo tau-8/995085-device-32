@@ -457,13 +457,6 @@
   right: -14px;
 }
 
-.site-navigation__item--catalog {
-  align-self: start;
-  display: flex;
-  justify-content: flex-start;
-  grid-row: span 10;
-}
-
 .site-navigation__link {
   display: block;
   padding: 14px 17px 15px 20px;
@@ -507,6 +500,16 @@
   opacity: 0.3;
 }
 
+.site-navigation__item--catalog {
+  --after-background: url("../images/icons/plus.svg");
+  --after-opacity: 0.2;
+  --dropdown-visibility: none;
+  align-self: start;
+  display: flex;
+  justify-content: flex-start;
+  grid-row: span 10;
+}
+
 .site-navigation__link--catalog {
   position: relative;
   padding-left: 20px;
@@ -530,31 +533,10 @@
   box-sizing: border-box;
   width: 50px;
   height: 50px;
-  background: no-repeat url("../images/icons/plus.svg") center/16px 16px;
+  background: no-repeat var(--after-background) center / 16px 16px;
   border: 2px solid #000000;
   border-radius: 25px;
-  opacity: 0.2;
-}
-
-.site-navigation__link--catalog:hover {
-  opacity: 1;
-}
-
-.site-navigation__link--catalog:hover::after {
-  background: no-repeat url("../images/icons/minus.svg") center/16px 16px;
-  opacity: 1;
-}
-
-.site-navigation__link--catalog:hover + .site-navigation__dropdown--hidden {
-  display: block;
-}
-
-.site-navigation__dropdown:hover {
-  display: block;
-}
-
-.site-navigation__link--catalog:active {
-  opacity: 0.3;
+  opacity: var(--after-opacity);
 }
 
 .site-navigation__dropdown {
@@ -562,17 +544,25 @@
   position: absolute;
   top: 100%;
   left: 0;
+  display: var(--dropdown-visibility);
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.site-navigation__dropdown--hidden {
-  display: none;
+.site-navigation__link--catalog:hover {
+  opacity: 1;
 }
 
-.site-navigation__dropdown--visible {
-  display: block;
+.site-navigation__item--catalog:hover,
+.site-navigation__item--catalog:focus-within {
+  --after-background: url("../images/icons/minus.svg");
+  --after-opacity: 1;
+  --dropdown-visibility: block;
+}
+
+.site-navigation__link--catalog:active {
+  opacity: 0.3;
 }
 
 .catalog-dropdown {
@@ -2579,6 +2569,10 @@
 
 .card:focus-within .card__image {
   outline: 5px solid #af4fff;
+}
+
+.card:focus-within .card__overlay {
+  opacity: 1;
 }
 
 .card:focus-within .card__text,
