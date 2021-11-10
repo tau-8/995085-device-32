@@ -628,7 +628,7 @@
 /* Поповер корзины */
 .popover {
   --horizontal-shift: -3px;
-  z-index: 2;
+  z-index: 9;
   position: absolute;
   color: #ffffff;
   background-color: #000000;
