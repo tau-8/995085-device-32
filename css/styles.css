@@ -1786,10 +1786,6 @@
   outline-offset: 5px;
 }
 
-.breadcrumbs__link[aria-current="page"] {
-  pointer-events: none;
-}
-
 .breadcrumbs__item:not(:last-child)::after {
   content: "";
   position: absolute;
