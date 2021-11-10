@@ -1432,20 +1432,24 @@
 }
 
 .delivery__button:hover {
-  background-image: linear-gradient(to right, #ffc700 125px, #f0f0f0 125px);
+  background-image: linear-gradient(to right, #ffc700 125px, #ebebeb 125px);
 }
 
 .delivery__button:hover::after {
   opacity: 1;
 }
 
-.delivery__button:active::before,
-.delivery__button:active span {
+.delivery__button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.delivery__button:active::before {
   opacity: 0.3;
 }
 
 .delivery__button:active::after {
-  opacity: 0.5;
+  background-color: #b7b7b7;
+  opacity: 0.3;
 }
 
 /* О нас */
