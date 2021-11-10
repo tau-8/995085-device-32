@@ -2687,6 +2687,10 @@
   border-radius: 30px;
 }
 
+.card__new--hidden {
+  display: none;
+}
+
 .products__more-link {
   z-index: 2;
   justify-self: end;
