@@ -70,8 +70,8 @@
 }
 
 .logo-link {
+  position: absolute;
   display: block;
-  position: relative;
 }
 
 .logo-link::after {
@@ -224,9 +224,8 @@
 }
 
 .header__logo {
-  position: absolute;
-  left: 61px;
   top: 17px;
+  left: 61px;
 }
 
 .header__search {
@@ -2867,12 +2866,12 @@
     ". social devs";
   row-gap: 49px;
 }
-/* Логотип-ссылка */
+
 .footer__logo {
-  position: absolute;
   top: 62px;
   left: -2px;
 }
+
 /* Адрес и телефон */
 .footer__contacts {
   grid-area: contacts;
