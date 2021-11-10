@@ -1671,6 +1671,10 @@
   opacity: 0.5;
 }
 
+.email-form__field:hover {
+  border-color: #cacaca;
+}
+
 .email-form__field:not(:placeholder-shown) {
   border-color: #000000;
 }
