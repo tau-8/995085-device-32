@@ -1685,6 +1685,14 @@
   border-color: #ff3d3d;
 }
 
+.email-form__field:disabled {
+  background-color: #d8d8d8;
+}
+
+.email-form__field:disabled::placeholder {
+  color: transparent;
+}
+
 .email-form__button {
   padding: 13px 36px 15px 39px;
   font-family: "Raleway", sans-serif;
@@ -2169,6 +2177,12 @@
   background-image: url("../images/icons/tick-focus.svg");
 }
 
+/* У чекбоксов c disabled светло-серый цвет и отключены состояния */
+.filters__checkbox:disabled + .filters__label--checkbox {
+  --opacity: 0.3;
+  pointer-events: none;
+}
+
 .filters__label--radio {
   --text-color: #000000;
   --opacity: 1;
@@ -2251,6 +2265,12 @@
   --text-color: #af4fff;
   --border-color: #af4fff;
   --point-color: #af4fff;
+}
+
+/* У радиокнопок c disabled светло-серый цвет и отключены состояния */
+.filters__radio:disabled + .filters__label--radio {
+  --opacity: 0.3;
+  pointer-events: none;
 }
 
 .filters__button {
@@ -2455,7 +2475,6 @@
 .order__button {
   width: 30px;
   height: 30px;
-  background: none;
   border: none;
   cursor: pointer;
   background: no-repeat url("../images/icons/sort-up.svg") center / 11px 10px;
@@ -3229,6 +3248,14 @@
   border: none;
 }
 
+.delivery-form__input:disabled {
+  background-color: #d8d8d8;
+}
+
+.delivery-form__input:disabled::placeholder {
+  color: transparent;
+}
+
 .delivery-form__input:not(:placeholder-shown) {
   border: 3px solid #000000;
 }
@@ -3276,6 +3303,11 @@
 
 .delivery-form__tip--important {
   color: #ff3d3d;
+}
+
+/* У полей с disabled сопроводительный текст светло-серый */
+.delivery-form__input:disabled ~ .delivery-form__tip {
+  color: #dcdcdc;
 }
 
 .info {
@@ -3406,6 +3438,11 @@
 
 .delivery-form__input--counter::-webkit-inner-spin-button {
   appearance: none;
+}
+
+/* Отключает кнопки если поле disabled */
+.delivery-form__input--counter:disabled ~ .delivery-form__button {
+  pointer-events: none;
 }
 
 .delivery-form__submit {
