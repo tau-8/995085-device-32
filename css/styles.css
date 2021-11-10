@@ -2474,40 +2474,55 @@
   list-style-type: none;
 }
 
-.order__button {
+.order__link {
+  position: relative;
+  display: block;
   width: 30px;
   height: 30px;
-  border: none;
   cursor: pointer;
-  background: no-repeat url("../images/icons/sort-up.svg") center / 11px 10px;
 }
 
-.order__button:not(:disabled):hover {
+.order__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat url("../images/icons/sort-up.svg") center / 11px 10px;
+  opacity: 0.2;
+}
+
+.order__link:hover::after {
   opacity: 0.5;
 }
 
-.order__button:not(:disabled):active {
-  opacity: 0.2;
+.order__link:active::after {
+  opacity: 1;
 }
 
-.order__button:focus {
+.order__link:focus {
   outline: 5px solid #af4fff;
 }
 
-.order__button:focus:not(:focus-visible) {
+.order__link:focus:not(:focus-visible) {
   outline: none;
 }
 
-.order__button:focus-visible {
+.order__link:focus-visible {
   outline: 5px solid #af4fff;
 }
 
-.order__button--current {
-  opacity: 0.2;
-  cursor: unset;
+.order__link--current::after {
+  outline: none;
+  opacity: 1;
 }
 
-.order__button--down {
+.order__link--current:hover::after {
+  opacity: 1;
+}
+
+.order__link--down {
   transform: rotate(180deg);
 }
 
