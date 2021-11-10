@@ -2847,6 +2847,7 @@
 \\\ Футер сайта \\\
 \\\\\\\\\\\\\\\\\*/
 .footer {
+  z-index: 3;
   color: #ffffff;
   background-color: #444444;
 }
