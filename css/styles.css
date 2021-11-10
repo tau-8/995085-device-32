@@ -1790,6 +1790,7 @@
   padding-left: 6px;
   padding-right: 6px;
   outline-offset: 5px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .breadcrumbs__item:not(:last-child)::after {
@@ -1803,16 +1804,12 @@
   opacity: 0.2;
 }
 
-.breadcrumbs__link span {
-  opacity: 0.6;
+.breadcrumbs__link:hover {
+  color: rgba(0, 0, 0, 1);
 }
 
-.breadcrumbs__link:hover span {
-  opacity: 1;
-}
-
-.breadcrumbs__link:active span {
-  opacity: 0.3;
+.breadcrumbs__link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .breadcrumbs__link:focus {
