@@ -1773,6 +1773,8 @@
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   margin-left: -6px;
 }
 
