@@ -2858,13 +2858,13 @@
 /* Адрес и телефон */
 .footer__contacts {
   grid-area: contacts;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .footer__contacts-address {
   padding-right: 25px;
   padding-top: 8px;
-  font-size: 16px;
-  line-height: 19px;
   font-style: normal;
 }
 
@@ -2875,7 +2875,8 @@
 .footer__contacts-phone {
   position: absolute;
   right: -12px;
-  top: 138px;
+  top: 133px;
+  line-height: 30px;
 }
 /* Наши предложения */
 .footer__services {
