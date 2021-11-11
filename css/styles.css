@@ -3479,6 +3479,7 @@
   margin-top: 45px;
   margin-bottom: 4px;
   padding: 9px 28px 10px 31px;
+  color: rgba(0, 0, 0, 1);
 }
 
 .delivery-form__submit::after {
@@ -3493,8 +3494,8 @@
   height: 100%;
 }
 
-.delivery-form__submit:active span {
-  opacity: 0.3;
+.delivery-form__submit:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .delivery-form__submit:focus::after {
