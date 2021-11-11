@@ -210,7 +210,7 @@
             <h3 class="catalog__title sorting__title">Сортировка:</h3>
             <details class="sorting__selection selection">
               <summary class="selection__summary">
-                <span class="visually-hidden">Сортировка. Выбрано:</span>
+                <span class="visually-hidden">Тип сортировки. Выбрано:</span>
                 <span class="selection__selected">Сначала популярные</span>
               </summary>
               <div class="selection__popover">
@@ -236,7 +236,7 @@
             <ul class="sorting__order order">
               <!-- Дополнительно переделал состояния элементов order__link. В процессе внесения правок по замене кнопок на ссылки еще раз посмотрел в стайлгайд
                 и обнаружил, что стили при наведении и активности у непрозрачной ссылки никак не обозначены. Получается, что непрозрачной становится та ссылка,
-                которая активирует тип сортировки примененный в данный момент, а потому она не должна менять внешний вид при ховере и нажатии -->;
+                которая активирует тип сортировки примененный в данный момент, а потому она не должна менять внешний вид при ховере и нажатии -->
               <li class="order__item">
                 <a class="order__link order__link--up link" href="javascript:undefined">
                   <span class="visually-hidden">Сортировать по возрастанию.</span>
@@ -254,6 +254,12 @@
             <h3 class="visually-hidden">Список товаров:</h3>
             <ul class="products__list">
               <li class="products__card card">
+                <!-- Заменил всем значкам "NEW" скрытие visually-hidden на display: none,
+                  чтобы скрин ридер не произносил их на товарах которые не помечены как новые,
+                  а также переместил их в начало карточки товара -->
+                <span class="card__new">New
+                  <span class="visually-hidden">Новый товар</span>
+                </span>
                 <img class="card__image" src="images/product-1.jpg" width="360" height="380" alt="Изображение товара.">
                 <dl class="card__text">
                   <dt class="card__title">Любительская селфи-палка</dt>
@@ -264,11 +270,11 @@
                     <span>Подробнее</span>
                   </a>
                 </div>
-                <!-- Заменил всем значкам "NEW" скрытие visually-hidden на display: none,
-                  чтобы скрин ридер не произносил их на товарах которые не помечены как новые -->
-                <span class="card__new">New</span>
               </li>
               <li class="products__card card">
+                <span class="card__new">New
+                  <span class="visually-hidden">Новый товар</span>
+                </span>
                 <img class="card__image" src="images/product-2.jpg" width="360" height="380" alt="Изображение товара.">
                 <dl class="card__text">
                   <dt class="card__title">Профессиональная<br>селфи-палка</dt>
@@ -279,9 +285,11 @@
                     <span>Подробнее</span>
                   </a>
                 </div>
-                <span class="card__new">New</span>
               </li>
               <li class="products__card card">
+                <span class="card__new">New
+                  <span class="visually-hidden">Новый товар</span>
+                </span>
                 <img class="card__image" src="images/product-3.jpg" width="360" height="380" alt="Изображение товара.">
                 <dl class="card__text">
                   <dt class="card__title">Непотопляемая<br>селфи-палка</dt>
@@ -292,9 +300,11 @@
                     <span>Подробнее</span>
                   </a>
                 </div>
-                <span class="card__new">New</span>
               </li>
               <li class="products__card card">
+                <span class="card__new card__new--visible">New
+                  <span class="visually-hidden">Новый товар</span>
+                </span>
                 <img class="card__image" src="images/product-4.jpg" width="360" height="380" alt="Изображение товара.">
                 <dl class="card__text">
                   <dt class="card__title">Селфи-палка «Следуй за<br>мной»</dt>
@@ -305,7 +315,6 @@
                     <span>Подробнее</span>
                   </a>
                 </div>
-                <span class="card__new card__new--visible">New</span>
               </li>
             </ul>
             <a class="products__more-link link" href="javascript:undefined">Загрузить еще</a>
@@ -386,7 +395,7 @@
           <ul class="social-media__list">
             <li class="social-media__item">
               <a class="social-media__button" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">В Фейсбуке.</span>
+                <span class="visually-hidden">Наш Фейсбук.</span>
                 <svg class="social-media__icon"
                 aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                 width="9" height="18" viewBox="0 0 9 18">
@@ -396,7 +405,7 @@
             </li>
             <li class="social-media__item">
               <a class="social-media__button" href="https://www.instagram.com/htmlacademy">
-                <span class="visually-hidden">В Инстаграме.</span>
+                <span class="visually-hidden">Наш Инстаграм.</span>
                 <svg class="social-media__icon"
                 aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                 width="16" height="16"  viewBox="0 0 16 16">
@@ -407,7 +416,7 @@
             </li>
             <li class="social-media__item">
               <a class="social-media__button" href="https://twitter.com/htmlacademy_ru">
-                <span class="visually-hidden">В Твиттере.</span>
+                <span class="visually-hidden">Наш Твиттер.</span>
                 <svg class="social-media__icon"
                 aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                 width="15" height="14" viewBox="0 0 15 14">
