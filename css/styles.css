@@ -244,9 +244,9 @@
   line-height: 19px;
 }
 
-.site-search__label::before {
-  content: "";
+.site-search__label {
   position: absolute;
+  display: block;
   top: 50%;
   left: 16px;
   margin-top: -8px;
@@ -255,6 +255,7 @@
   background-image: url("../images/icons/search.svg");
   background-repeat: no-repeat;
   background-position: center;
+  pointer-events: none;
 }
 
 .site-search__field {
