@@ -264,7 +264,9 @@
                     <span>Подробнее</span>
                   </a>
                 </div>
-                <span class="card__new card__new--hidden">New</span>
+                <!-- Заменил всем значкам "NEW" скрытие visually-hidden на display: none,
+                  чтобы скрин ридер не произносил их на товарах которые не помечены как новые -->
+                <span class="card__new">New</span>
               </li>
               <li class="products__card card">
                 <img class="card__image" src="images/product-2.jpg" width="360" height="380" alt="Изображение товара.">
@@ -277,7 +279,7 @@
                     <span>Подробнее</span>
                   </a>
                 </div>
-                <span class="card__new card__new--hidden">New</span>
+                <span class="card__new">New</span>
               </li>
               <li class="products__card card">
                 <img class="card__image" src="images/product-3.jpg" width="360" height="380" alt="Изображение товара.">
@@ -290,7 +292,7 @@
                     <span>Подробнее</span>
                   </a>
                 </div>
-                <span class="card__new card__new--hidden">New</span>
+                <span class="card__new">New</span>
               </li>
               <li class="products__card card">
                 <img class="card__image" src="images/product-4.jpg" width="360" height="380" alt="Изображение товара.">
@@ -303,7 +305,7 @@
                     <span>Подробнее</span>
                   </a>
                 </div>
-                <span class="card__new">New</span>
+                <span class="card__new card__new--visible">New</span>
               </li>
             </ul>
             <a class="products__more-link link" href="javascript:undefined">Загрузить еще</a>

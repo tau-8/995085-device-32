@@ -2670,7 +2670,7 @@
   position: absolute;
   top: 27px;
   right: 27px;
-  display: block;
+  display: none;
   box-sizing: border-box;
   width: 60px;
   height: 60px;
@@ -2687,8 +2687,8 @@
   border-radius: 30px;
 }
 
-.card__new--hidden {
-  display: none;
+.card__new--visible {
+  display: block;
 }
 
 .products__more-link {
